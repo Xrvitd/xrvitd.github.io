@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.stitle{
+	color:#444;
+	font-size:0.95em;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('OpenSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/texture4.jpg);
+	color: #666;
+	line-height: 1.4em;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+}
+
+strong{
+	font-weight:bold;
+}
+
+.pub_item strong{
+	font-weight: 600;
+	color: #222;
+}
+
+.shadow {
+	-moz-box-shadow: 0px 2px 8px #aaa;
+	-webkit-box-shadow: 0px 2px 8px #aaa;
+	box-shadow: 0px 2px 8px #aaa;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#aaaaaa')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#aaaaaa');
+}
+
+.dark_link{
+    text-decoration:none;
+    color: #203085;
+}
+/*a.darklink:visited{
+    color: #000033;
+}*/
+
+a{
+	text-decoration:none;
+	/*color:#2C5CBB;*/
+	color: #0078BC
+}
+
+/*a:visited{
+	color:#2C5CBB;
+}*/
+
+#page {
+ background-color: #ffffff;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 10px;
+ width: 1080px;
+ text-align: left;
+ border-left: 1px solid #f1f1f1;
+ border-right: 1px solid #f1f1f1;
+}
+
+#inner-page{
+	 padding: 20px 26px 26px 26px;
+}
+
+#header {
+ margin: auto;
+ text-align: center;
+}
+
+#navigation{
+	text-align:left;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #d9d9d9;
+	width: 380px;
+}
+#navigation a{
+	color:#5C8CBB;
+	text-decoration:underline;
+}
+
+#main { 
+ border-bottom: 1px solid #d9d9d9;
+}
+
+ul.pub_table{
+	list-style:none;
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+li.pub_item{
+	position: relative;
+	clear: both;
+}
+li.pub_item img{
+	float: left;
+	margin: 16px 0 10px 0;
+}
+
+li.pub_item div{
+	padding:0;
+	margin: 0 0 0 120px;
+}
+
+li.pub_item div p{
+	margin: 0;
+	padding: 14px 0 20px 0;
+}
+
+span.heading-main{
+	/*font: 11pt "Lucida Grande", "Bitstream Vera Sans", "Verdana";*/
+	/*font-style: bold;*/
+	font-size: 1.3em;
+	font-weight: 400;
+	color: #eb4d00;
+	display:block;
+}
+
+span.pub_authors, span.pub_authors a{
+	color: #000;
+	text-decoration: none;
+}
+span.pub_info, span.pub_info a{
+	text-decoration: none;
+}
+
+#sourcecode li {
+ margin-bottom: 25px;
+ clear:both;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal !important;
+	margin: 2px 0px 5px 0px;
+	padding: 2px 0px;
+	color: #666;
+}
+
+h1,h2{
+	font-weight: 400 !important;
+}
+
+h3,h4,h5,h6{
+	font-weight: 400 !important;
+	color: #666;
+}
+
+h2{
+	font-size: 40px;
+	line-height: 45px;
+}
+
+h3{
+	font-size: 30px;
+	line-height: 35px;
+}
+
+h4{
+	font-size: 25px;
+	line-height: 30px;
+}
+
+h5{
+	font-size: 20px;
+	line-height: 25px;
+}
+
+h6{
+	font-size: 16px;
+	line-height: 24px;
+}
+
+#photo {
+float: left;
+padding: 0;
+margin-right:20px;
+/*border: 3px solid #444;*/
+/*margin: 0px 12px 12px 0px;*/
+}
+
+.x-badge{
+	/*padding-left: 200px;*/
+    margin-bottom: 20px;
+}
+
+#title{
+}
+
+#name{
+	/*font: 1.65em "Lucida Grande", "Bitstream Vera Sans", "Verdana";*/
+	font-size: 1.6em;
+	margin: 0 0 0 0;
+	/*padding: 4px 0 0 0;*/
+	color: #eb4d00;
+	font-weight: 600;
+}
+
+#affiliation{
+}
+
+#affiliation-type{
+	/*font: 12pt "Lucida Grande", "Bitstream Vera Sans", "Verdana";*/
+}
+
+#footer{
+	clear: both;
+	text-align: right;
+	margin-top:7px;
+}
+
+#publications{
+	margin-top:5px;
+	padding-top:15px;
+	border-top: 1px solid #ccc;
+}

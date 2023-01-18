@@ -1,0 +1,159 @@
+body {
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f4;
+ font-family: 'Lato', sans-serif;
+ font-weight: 400;
+ color: #333;
+ text-align: center;
+}
+
+.shadow {
+	-moz-box-shadow: 0px 2px 8px #aaa;
+	-webkit-box-shadow: 0px 2px 8px #aaa;
+	box-shadow: 0px 2px 8px #aaa;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#aaaaaa')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#aaaaaa');
+}
+
+.dark_link{
+    text-decoration:none;
+    color: #203085;
+}
+/*a.darklink:visited{
+    color: #000033;
+}*/
+
+a{
+	text-decoration:none;
+	color:#2C5CBB;
+}
+
+/*a:visited{
+	color:#2C5CBB;
+}*/
+
+#page {
+ background-color: #ffffff;
+ margin-left: auto;
+ margin-right: auto;
+ /*width: 800px;*/
+ text-align: left;
+ border-left: 1px solid #d9d9d9;
+ border-right: 1px solid #d9d9d9;
+}
+
+#inner-page{
+	 padding: 12px 26px 26px 26px;
+}
+
+#header {
+ margin: auto;
+ text-align: center;
+}
+
+#navigation{
+	text-align:left;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #d9d9d9;
+	width: 380px;
+}
+#navigation a{
+	color:#5C8CBB;
+	text-decoration:underline;
+}
+
+#main { 
+ padding-left: 10px; padding-right: 0px; 
+ border-bottom: 1px solid #d9d9d9;
+ margin-top: 8px;
+ padding-top: 15px;
+}
+
+ul.pub_table{
+	list-style:none;
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+li.pub_item{
+	position: relative;
+	clear: both;
+}
+li.pub_item img{
+	float: left;
+	margin: 10px 0 10px 0;
+}
+
+li.pub_item div{
+	padding:0;
+	margin: 0 0 0 135px;
+}
+
+li.pub_item div p{
+	margin: 0;
+	padding: 14px 0 20px 0;
+}
+
+span.heading-main{
+	font: 11pt "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+	font-style: bold;
+}
+
+span.pub_authors, span.pub_authors a{
+	color: #000;
+	text-decoration: none;
+}
+span.pub_info, span.pub_info a{
+	text-decoration: none;
+}
+
+#sourcecode li {
+ margin-bottom: 25px;
+ clear:both;
+}
+
+#photo {
+float: right;
+padding: 0;
+/*border: 1px solid black;*/
+margin: 20px;
+}
+
+#badge{
+	
+}
+
+#title{
+}
+
+#name{
+	font: 1.65em "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+	margin: 0;
+	padding: 0;
+}
+
+#affiliation{
+}
+
+#affiliation-type{
+	font: 12pt "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+}
+
+
+#about p{
+	margin-top: 4px;
+}
+
+#footer{
+	clear: both;
+	text-align: right;
+	margin-top:7px;
+}
+
+#publications{
+	margin-top:5px;
+	padding-top:15px;
+	border-top: 1px solid #ccc;
+}
