@@ -1,0 +1,388 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>RFEPS: Reconstructing Feature-line Equipped Polygonal Surface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon" href="./images/QQ图片20220912112705.jpg" sizes="64x64" type="image/png">
+
+	<!-- Meta tags for Zotero grab citation -->
+<!--	<meta name="citation_title" content="RFEPS: Reconstructing Feature-line Equipped Polygonal Surface">-->
+<!--	<meta name="citation_author" content="Rui Xu">-->
+<!--	<meta name="citation_author" content="Zhiyang Dou">-->
+<!--	<meta name="citation_author" content="Ningna Wang">-->
+<!--	<meta name="citation_author" content="Chen Zong">-->
+<!--	<meta name="citation_author" content="Shiqing Xin">-->
+<!--	<meta name="citation_author" content="Mingyan Jiang">-->
+<!--	<meta name="citation_author" content="Tao Ju">-->
+<!--	<meta name="citation_author" content="Changhe Tu">-->
+<!--	<meta name="citation_publication_date" content="2022">-->
+<!--	<meta name="citation_conference_title" content="SIGGRAPH Asia">-->
+<!--	<meta name="citation_pdf_url" content="https://arxiv.org/abs/2212.03600">-->
+
+	<meta name="robots" content="index,follow">
+	<meta name="description"
+		content="
+		Feature lines are important geometric cues in characterizing the structure of a CAD model. Despite great progress in both explicit reconstruction and implicit reconstruction, it remains a challenging task to reconstruct a polygonal surface equipped with feature lines, especially when the input point cloud is noisy and lacks faithful normal vectors. In this paper, we develop a multistage algorithm, named RFEPS, to address this challenge. The key steps include (1) denoising the point cloud based on the assumption of local planarity, (2) identifying the feature-line zone by optimization of discrete optimal transport, (3) augmenting the point set so that sufficiently many additional points are generated on potential geometry edges, and (4) generating a polygonal surface that interpolates the augmented point set based on restricted power diagram. We demonstrate through extensive experiments that RFEPS, benefiting from the edge-point augmentation and the feature preserving explicit reconstruction, outperforms state of the art methods in terms of the reconstruction quality, especially in terms of the ability to reconstruct missing feature lines.">
+		<link rel="author" href="" />
+
+
+	<!-- Fonts and stuff -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800'
+		rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+	<script src="js/google-code-prettify/prettify.js"></script>
+</head>
+
+<body>
+	<div id="content">
+		<div id="content-inner">
+			<div class="section logos" style="text-align:center">
+				<a href="https://www.en.sdu.edu.cn/" target="_blank"><IMG src="./logos/Logo_SDU.png" height="66" border="0"></a></td>
+				<a href="https://www.hku.hk/" target="_blank"><IMG src="./logos/Logo_HKU.png" height="66" border="0"></a>
+				</td>
+				<a href="https://www.utdallas.edu/" target="_blank"><IMG src="./logos/utd.png" height="66"	border="0"></a></td>
+				<a href="https://en.qust.edu.cn/" target="_blank"><IMG src="./logos/qingke.jpg" height="66"	border="0"></a></td>
+				<a href="https://www.tamu.edu/" target="_blank"><IMG src="./logos/Logo_TAMU.png" height="66"	border="0"></a></td>
+
+			</div>
+
+			<div class="section head">
+
+				<h1>Globally Consistent Normal Orientation for Point Clouds by Regularizing the Winding-Number Field</h1>
+
+				<div class="authors">
+					<a href="https://xrvitd.github.io/index.html" target="_blank">Rui Xu</a><sup> 1</sup>&#160;&#160;
+					<a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a><sup> 2</sup>&#160;&#160;
+					<a href="https://ningnawang.github.io/" target="_blank">Ningna Wang</a><sup> 3</sup>&#160;&#160;
+					<a href="http://irc.cs.sdu.edu.cn/~shiqing/index.html" target="_blank">Shiqing Xin</a><sup> 1</sup>&#160;&#160;
+					<a href="" target="_blank">Shuangmin Chen</a><sup> 4</sup>&#160;&#160;
+					<a href="" target="_blank">Mingyan Jiang</a><sup> 1</sup>&#160;&#160;<br>
+					<a href="https://personal.utdallas.edu/~xguo/">Xiaohu Guo</a><sup> 3</sup>&#160;&#160;
+					<a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html">Wenping Wang</a><sup> 5</sup>&#160;&#160;
+					<a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a><sup> 1</sup>&#160;&#160;
+				</div>
+
+				<div class="affiliations">
+					<sup>1</sup><a href="https://www.en.sdu.edu.cn/" target="_blank">Shandong University</a>&#160;&#160;
+					<sup>2</sup><a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>&#160;&#160;<br>
+					<sup>3</sup><a href="https://www.utdallas.edu/" target="_blank">The University of Texas at Dallas</a>&#160;&#160;
+					<sup>3</sup><a href="https://en.qust.edu.cn/" target="_blank">Qingdao University of Science and Technology</a>&#160;&#160;<br>
+					<sup>3</sup><a href="https://www.tamu.edu/" target="_blank">The University of Texas at Dallas</a>&#160;&#160;
+				</div>
+				<div class="venue"> SIGGRAPH 2023 Journal Track Conditionally Accepted. </div>
+			</div>
+						<div class="section downloads">
+					<center>
+						<ul style="padding-left: 0">
+							<li class="grid">
+								<div class="griditem">
+									<a href=" "><img src="images/pdf.png"></a><br/>
+									<a href=" ">Paper[Coming soon]</a>
+								</div>
+							</li><li class="grid">
+								<div class="griditem">
+									<a href="https://github.com/Xrvitd/GCNO"><img src="images/data_ico.png"></a><br/>
+									<a href="https://github.com/Xrvitd/GCNO">Code</a>
+
+								</div>
+							</li></ul>
+					</center>
+				</div>
+
+
+				
+
+
+
+
+
+			<div class="section abstract">
+				<h2>Abstract</h2><br>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="figs/teaser4.png" style="width:100%; margin-bottom:20px">
+					</div>
+
+				</div>
+				<p>
+					Estimating normals with globally consistent orientations for a raw point cloud has many downstream geometry processing applications.
+					Despite tremendous efforts in the past decades, it remains challenging to deal with an unoriented point cloud with various imperfections, particularly in the presence of data sparsity coupled with nearby gaps or thin-walled structures.
+					In this paper, we propose a smooth objective function to characterize the requirements of an acceptable winding-number field, which allows one to find the globally consistent normal orientations starting from a set of completely random normals.
+					By taking the vertices of the Voronoi diagram of the point cloud as examination points, we consider the following three requirements:
+					(1) the winding number is either 0 or 1, (2) the occurrences of 1 and the occurrences of 0 are balanced around the point cloud, and (3) the normals align with the outside Voronoi poles as much as possible.
+					Extensive experimental results show that our method outperforms the existing approaches, especially in handling sparse and noisy point clouds, as well as shapes with complex geometry/topology.				</p>
+			</div>
+
+			<!--<div class="section abstract">
+				<h2>Full Video</h2><br>
+				<center>
+					<!-- <iframe width="640" height="360" src="data/video.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+					<!--<iframe width="640" height="360" src="https://www.youtube.com/embed/RFqPwH7QFEI" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>-->
+					<!--iframe src="./data/video.mp4" allow="autoplay; encrypted-media" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="560" height="315" frameborder="0"></iframe-->
+					<!--<p style="font-size:11px; text-align:center">
+					Download Video: <a href="data/video.mp4" target="_blank">HD</a> (MP4, 111 MB)
+				</p>
+				</center>
+			</div>-->
+
+			<div class="section abstract">
+				<h2>Introduction</h2>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<video class="video" src="videos/SIG_2023_iter.mp4" controls="controls" autoplay="autoplay" loop="loop" style="width:98%; margin-bottom:20px"></video>
+
+<!--						<img class="thumbnail" src="figs/gallery.png" style="width:98%; margin-bottom:20px">-->
+					</div>
+					<p>The optimization progress using our method. The input model is a thin board with randomly initialized normals (in orange) of the point cloud. We cut
+						the board in the middle with a plane to show the sectional view of the winding-number field (visualized in a color-coded style)
+					</p>
+					</div>
+				</center>
+			<p>
+				In recent years, the winding number, as a powerful tool for inside outside tests, has gained increasing attention in digital geometry
+				processing, ranging from meshing to reconstruction. Despite the ability to
+				distinguish the interior part (the winding number is close to 1) from
+				the exterior part (the winding number is close to 0), it seriously
+				depends on the support of reliable normals. Our hypothesis is that
+				only when the normals are oriented with global consistency, the
+				winding-number field could be approximately binary-valued with
+				1 and 0. This inspires us to optimize the normals such that the
+				winding-number field becomes fully regularized.
+				<br>
+
+				In this paper,  we propose an all-in-one functionality to characterize the
+				requirements of a winding-number field from three aspects: (a) the
+				winding number should be close to either 1 or 0 at any query point,
+				(b) when the query points are scattered in the neighborhood of input
+				samples p𝑖 , the occurrences of 1 and the occurrences of 0 should
+				be approximately balanced, and (c) the sample p𝑖’s normal vector
+				should align well with the direction towards the outside Voronoi
+				pole.
+			</p>
+			</div>
+
+			<br>
+
+			<div class="section abstract">
+				<h2>Results</h2><br>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="figs/gallery.png" style="width:98%; margin-bottom:20px">
+					</div>
+					<p>
+						We equip the input unoriented point clouds with our computed normals (rendered with RGB mapping). By feeding the points and the normals together
+						into the screened Poisson reconstruction (SPR) solver, we get high-fidelity reconstruction results (in gray), which exhibit the high quality of the computed
+						normals. </p>
+					</div>
+
+				</center>
+
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/normalcomp.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Comparison on the ratio of true normals between our approach and the existing five methods: Hoppe [Hoppe et al. 1992], König [König and Gumhold
+							2009], PCPNet [Guerrero et al. 2018], Dipole [Metzer et al. 2021] and PGR [Lin et al. 2022]. The true predictions and false predictions are colored in blue and
+							red, respectively. Note that the level of Gaussian noise is 0.5%. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/noiseNormal.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							The Chair model contains thin-walled tubes and plates, as well as nearby gaps (see the highlighted region). Our approach can yield the highest truth
+							percentage among the five approaches. Note that the false predictions are colored in red. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/reconcomp.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Visual comparison of the reconstructed surfaces at different sampling conditions and different levels of noise. We show results of four different
+							sampling conditions: BS (blue noise sampling), WS (white noise sampling), WS_0.25 (white noise sampling with 0.25% noise) and WS_0.5 (white noise sampling
+							with 0.5% noise). </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/noisy.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Comparing the reconstruction quality on point clouds with 0.5% Gaussian noise. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/sparse.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Tests are made on sparse point clouds: 500 points, 750 points and 1K points. Our results are close to the ground truth for each of the three inputs. The
+							comparison shows that our algorithm has a big advantage on sparse raw data. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/complex.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Tests on point clouds with highly complex topology/geometry. The model in the top row has 80K points while the model in the bottom row has 100K
+							points. </p>
+					</div>
+
+				</center>
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/wairf.png" style="width:50%; margin-bottom:20px">
+						</div>
+						<p>
+							Normal estimation for wireframe-type point clouds. All the models
+							are from VIPSS [Huang et al. 2019]. PGR may produce bulges around thin
+							tubular structures.
+						</p>
+					</div>
+
+				</center>
+
+
+			</div>
+
+			<br>
+
+<!--				<div class="section abstract">-->
+<!--				<h2>Consolidation Results</h2><br>-->
+<!--				<br>-->
+<!--				<center>-->
+<!--					<div class="row" style="margin-bottom:5px">-->
+<!--					<div class="col" style="text-align:center">-->
+<!--						<img class="thumbnail" src="figs/conso.png" style="width:100%; margin-bottom:20px">-->
+<!--					</div>-->
+<!--					<p>Test point cloud consolidation approaches by introducing different levels of noise. It can be seen that our method can not only effectively eliminate-->
+<!--						noise but also recover faithful feature lines. -->
+<!--					</p>-->
+<!--					</div>-->
+<!--				</center>-->
+<!--			-->
+<!--				-->
+<!--				</div>-->
+<!--			<br>-->
+
+<!--				<div class="section abstract">-->
+<!--				<h2>Reconstruction Results</h2>-->
+<!--				-->
+
+
+<!--				<center>-->
+<!--					<div class="row" style="margin-bottom:5px">-->
+<!--					<div class="col" style="text-align:center">-->
+<!--						<img class="thumbnail" src="figs/recon.png" style="width:100%; margin-bottom:20px">-->
+<!--					</div>-->
+<!--					<p>Comparison with state of the arts of surface reconstruction from different point cloud consolidation methods. The whole pipeline of RFEPS surpasses-->
+<!--						other methods in terms of reconstruction fidelity and manifoldness.-->
+<!--					</p>-->
+<!--					</div>-->
+<!--				</center>-->
+<!--				<br>-->
+
+
+<!--				<h2>Noisy Reconstruction Results</h2><br>-->
+<!--				<center>-->
+<!--					<div class="row" style="margin-bottom:5px">-->
+<!--					<div class="col" style="text-align:center">-->
+<!--						<img class="thumbnail" src="figs/reconnoise.png" style="width:100%; margin-bottom:20px">-->
+<!--					</div>-->
+<!--					<p> Comparison with state of the arts on a noisy point cloud input. RFEPS surpasses other methods in both the accuracy and manifoldness of the-->
+<!--						reconstruction.-->
+<!--					</div>-->
+<!--				</center>-->
+<!--				<br>-->
+
+				
+				<center>
+					<br>
+									<h2 align="center">Please check out our paper(Coming Soon) for more details. </h2>
+				</center>
+			
+				
+			</div>
+			
+			
+			
+
+			
+			<div class="section list">
+				<h2>Citation</h2>
+				<div class="section bibtex">
+					<pre>@article{?????}
+				Coming Soon.
+				</div>
+			</div>
+			
+		<!-- 	<div class="section list">
+				<h2>Related Links</h2>
+				<div class="row" style="margin-top:15px">
+				<li>Parts of <a href="https://github.com/Totoro97/NeuS" target="_blank">our PyTorch implementation</a> are taken from <a href="https://github.com/lioryariv/idr" target="_blank">IDR</a> and <a href="https://github.com/yenchenlin/nerf-pytorch" target="_blank">NeRF-pytorch</a>.
+				<li>Check the concurrent works of learning neural implicit surfaces: </br> 			
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://arxiv.org/abs/2104.10078" target="_blank">UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction</a>, Oechsle et al. 2021 </br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://arxiv.org/abs/2106.12052" target="_blank">Volume Rendering of Neural Implicit Surfaces</a>, Yariv et al. 2021 
+				<li>Also check other works about neural scene representations and neural rendering from our group: </br> 
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://lingjie0206.github.io/papers/NSVF/" target="_blank">Neural Sparse Voxel Fields:</a>, Liu et al. 2020 </br> 	
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/" target="_blank">Non-Rigid Neural Radiance Fields: Reconstruction and Novel View Synthesis of a Dynamic Scene From Monocular Video</a>, Tretschk et al. 2021</br> 	
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="http://gvv.mpi-inf.mpg.de/projects/NeuralActor/" target="_blank">Neural Actor: Neural Free-view Synthesis of Human Actors with Pose Control</a>, Liu et al. 2021 </br> 	
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://liuyuan-pal.github.io/NeuRay/" target="_blank">Neural Rays for Occlusion-aware Image-based Rendering</a>, Liu et al. 2021. </br> 	
+				</div>
+			</div>
+			
+			<div class="section list">
+				<h2>Acknowledgements</h2>
+				<div class="row" style="margin-top:15px">
+				<p>We thank Michael Oechsle for providing the results of UNISURF. Christian Theobalt was supported by ERC Consolidator Grant 770784. Lingjie Liu was supported by Lise Meitner Postdoctoral Fellowship.</p> 
+				</div>
+			</div> -->
+			
+			
+			<div class="section">
+				<hr class="smooth">
+			Page last updated 
+				<script type="text/javascript">
+					var m = "This page was last updated: " + document.lastModified;
+					var p = m.length - 9;
+					document.writeln("<left>");
+					document.write(m.substring(p, 0) + ".");
+					document.writeln("</left>");
+				</script>
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
