@@ -1,0 +1,1192 @@
+<!--doctype html-->
+<html lang="en">
+<head>
+
+    
+    <meta http-equiv="refresh" content="1;url=https://ruixu.me/"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Vicente Ordonez, 2020">
+    <title>Rui Xu's Homepage</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">-->
+    <!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+
+    <link rel="icon" href="images/QQ图片20220912112705.jpg" sizes="64x64" type="image/png">
+    <meta name="theme-color" content="#563d7c">
+</head>
+
+
+    
+    
+<body>
+
+<div class="container blank-container">
+
+    <header class="website-header">
+        <div class="d-flex flex-column flex-md-row align-items-center mb-3 border-bottom px-0 px-md-3 pt-4 pb-3">
+            <div class="website-header-box text-left mr-auto d-none d-md-block">
+                <a href="/" class="plain">
+                    <div class="vislang-head-text">
+
+                    </div>
+                    <div class="institution-head-text">
+                        <img src="images/山东大学校徽与中英文校名标准组合（横式）.jpg" style="height:68px;margin-top:-5px">
+                    </div>
+                </a>
+            </div>
+
+            <!--      <div class="website-header-box text-left d-block d-md-none my-2 pb-1">-->
+            <!--          <a href="/" class="plain">-->
+            <!--          <div class="vislang-head-text">-->
+            <!--              <img src="images/vislang-logo.png" class="group-logo-small" alt="Vision, Language and Learning Lab">-->
+            <!--          </div> -->
+            <!--          <div class="institution-head-text">-->
+            <!--              <div class="divider-bar">|</div> <img src="images/rice-logo-smaller.png" style="height:28px;margin-top:-4px">-->
+            <!--          </div>-->
+            <!--          </a>-->
+            <!--      </div>-->
+
+            <div class="nav-scroller">
+                <nav class="nav d-flex justify-content-end">
+
+                    <a class="px-2 text-dark m-0" href="https://xrvitd.github.io">Xrvitd</a>
+                    <!--a class="px-2 text-dark m-0" href="https://www.vislang.ai/people">people</a-->
+                    <a class="px-2 text-dark m-0" href="https://github.com/xrvitd">GitHub</a>
+                    <a class="px-2 text-dark m-0" href="https://xrvitd.github.io/CV_EN.pdf">CV</a>
+                    <!--a class="px-2 text-dark m-0" href="https://www.vislang.ai/publications">Group's publications</a-->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mb-0">
+        <div class="row">
+
+            <div class="px-1 px-md-4 py-3 col-lg-12">
+
+                <div class="subtext">
+
+                    <img src="images/2J7A1872 72.jpg" style="height:248px;" class="float-left mr-3 mb-3 img-thumbnail img-fluid" alt="Vicente Ordonez">
+
+                    <div class="x-badge mb-3" style="line-height: 1.2em;">
+                        <h3 id="name" class="p-0 m-0 mb-1">Rui Xu(徐瑞)</h3>
+                        <div>
+                            <div>Master Student<span style="color:#888"></span></div>
+                            <div><a href="http://irc.cs.sdu.edu.cn/"> Interdisciplinary Research Center </a></div>
+                            <div><a href="http://sdu.edu.cn/">Shandong University</a></div>
+                            <div style="font-size:0.96em">202112697@mail.sdu.edu.cn</div>
+                            <div style="font-size:0.96em">xrvitd@163.com</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 mt-sm-3">
+                        <p class="front-text">New homepage: <a herf="https://ruixu.me/"> ruixu.me </a>, try this pls~ <br>I am a second-year master student at the Interdisciplinary Research Center (<b>IRC</b>) of Shandong University.
+                            I am under the tutelage of <b>Prof. Changhe Tu</b> and <b>Prof. Shiqing Xin</b>.
+                            My research interests are computer graphics, computational geometry, point cloud reconstruction and geometric modeling.
+                        </p>
+
+                        <!--              <p class="subtext m-0">I'm Associate Professor in the Department of Computer Science at <a href="https://www.rice.edu">Rice University</a> -->
+                        <!--                where I lead the <a href="https://www.vislang.ai" style="font-weight:bold">Vision, Language, and Learning Lab</a> -->
+                        <!--                and I'm an Amazon Visiting Academic at <a href="https://www.amazon.jobs/en/teams/alexa-ai">Amazon Alexa AI</a>. -->
+                        <!--                From 2016-2021 I was an Assistant Professor in the Department of Computer Science at the University of Virginia.-->
+                        <!--                In the past, I have also been visiting professor at <a href="https://research.adobe.com/">Adobe Research</a> and visiting -->
+                        <!--                researcher at the <a href="http://allenai.org">Allen Institute for Artificial Intelligence (AI2)</a>. -->
+                        <!--                I received my PhD in Computer Science at the <a href="http://www.unc.edu">University of North Carolina at Chapel Hill</a> in 2015 advised by -->
+                        <!--                Prof. <a href="http://tamaraberg.com">Tamara L. Berg</a>, -->
+                        <!--                an MS in Computer Science at <a href="http://www.stonybrook.edu">Stony Brook University (SUNY)</a> -->
+                        <!--                and an engineering degree at the <a href="http://www.espol.edu.ec">Escuela Superior Polit&eacute;cnica del Litoral</a> in Ecuador.-->
+                        <!--                I'm a recipient of a Best -Long- Paper Award at the 2017 Conference on Empirical Methods in Natural Language Processing (EMNLP), -->
+                        <!--                and the Best Paper <a href="http://www.pamitc.org/iccv13/awards.php">Marr Prize</a> at the -->
+                        <!--                2013 International Conference in Computer Vision (ICCV). -->
+                        <!--                I have also received an NSF CAREER Award, an IBM Faculty Award, a Google Faculty Research Award, and a Facebook Research Award. -->
+                        <!--                Here is a link to an official <a href="bio.txt">bio</a>, and my <a href="cv_vicente.pdf">curriculum vitae</a>.-->
+                        <!--              </p>-->
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="row no-gutters flex-md-row mb-2 position-relative">
+
+                <div class="col px-4 py-3 pb-2 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-0">News and Updates</strong>
+                    <ul class="p-2 m-0 ml-2 text-smaller">
+                        <li>
+            <span style="font-weight: 400;color:#a00", class="front-text">
+
+New: I am looking for Ph.D. to start in Fall 2024. Contact me if you have any leads!</h1>
+
+            </span>
+                        </li>
+                        <li>
+            <span style="font-weight: 400;color:#a00">
+            07/2023. Our paper "GCNO" got the SIGGRAPH 2023 Technical Papers Best Paper Award!!!
+            </span>
+                        </li>
+                        <li> 07/2023. Attend IGS 2023 in Genova, great conference! </li>
+                        <li> 03/2023. One paper accepted to SIGGRAPH 2023. </li>
+                        <li>08/2022. Two papers accepted to SIGGRAPH Asia 2022.</li>
+                        <li>10/2022. Started Internship at Tencent IEG.</li>
+                        <li>09/2021. Started Master's degree at Shandong University. </li>
+                        <li>06/2020. Started Internship at Alibaba Antgroup. </li>
+                        <li>02/2020. One paper accepted to EUROGRAPHICS 2022. </li>
+
+                        <!--li>10/2020. Invited Talks at Rice University CS Colloquium, Samsung Research Cambridge, UK, and Facebook AI Systems Faculty Summit.</li>
+                        <li>09/2020. Invited Speaker <a href="https://www.ri.cmu.edu/event/compositional-representations-for-visual-recognition/">CMU VASC Seminar</a>.</li>
+                                  <li>08/2020. Invited Speaker at the International Meeting on Artificial Intelligence and its Applications - <a href="https://riiaa.org/en/home/">RIIAA 2020</a>.</li-->
+                        <!--li>06/2020. Andrew Ng's deeplearning.ai has a blog post highlighting our ACL 2020 paper Double-Hard Debias [<a href="https://blog.deeplearning.ai/blog/the-batch-nlp-special-issue-powerful-techniques-from-amazon-apple-facebook-google-microsoft-salesforce">link</a>].</li-->
+                        <!--li>05/2020. With a group of colleagues we released our white paper <a href="https://www.ajlunited.org/federal-office-call">Face Recognition Technologies in the Wild: A Call for a Federal Office</a>.</li-->
+                        <!--li>05/2020. Received a <a href="https://research.fb.com/blog/2020/05/announcing-the-winners-of-the-towards-on-device-ai-research-awards/">Facebook AI Research Award</a>.</li-->
+                        <!--li>08/2020. Co-Organizing the <a href="https://dramaqa.snu.ac.kr/Workshop/2020">The 2nd workshop on Video Turing Test:
+              Toward Human-Level Video Story Understanding</a> at ECCV 2020.</li-->
+                        <!--li>Serving as Area Chair for <a href="http://cvpr2020.thecvf.com/">CVPR 2020</a>, <a href="https://eccv2020.eu/">ECCV 2020</a>, <a href="https://acl2020.org/">ACL 2020</a>.</li-->
+                        <!--li>10/2019. Invited Speaker at ICCV 2019 <a href="https://sites.google.com/view/lingir">Workshop on Linguistics Meets Image and Video Retrieval</a>. Seoul, South Korea.</li-->
+                        <!--li> Posts from NVIDIA [<a href="https://news.developer.nvidia.com/ai-model-can-generate-images-from-natural-language-descriptions/">link</a>] and IBM Research [<a href="https://www.ibm.com/blogs/research/2019/06/text2scene-textual-descriptions/">link</a>] about <a href="https://arxiv.org/abs/1809.01110">Text2Scene</a></li>
+                        <li>06/2019. <a href="https://arxiv.org/abs/1809.01110">Text2Scene</a> gets named among 45 Best CVPR Paper Finalists among 1,294 accepted papers (top 1% of all submissions) [<a href="http://cvpr2019.thecvf.com/files/CVPR%202019%20-%20Welcome%20Slides%20Final.pdf">link</a>]</li-->
+                        <!--li>05/2019. Invited Panelist at Ethics in AI Panel at <a href="https://escapevelocity.events/">Escape Velocity 2019</a>, Washington DC's National Harbor.</li-->
+                        <!--li>04/2019. PhD Student <a href="http://www.cs.virginia.edu/~tw8cb">Tianlu Wang</a> speaking at the <a href="https://tomtomfest.com/machine-learning/amlc-speakers/">TomTom Applied Machine Learning Conference</a>.</li>
+                        <li>09/2018. Panelist and co-organizer. <a href="http://tapiaconference.org/schedule/friday-september-21-2018/1030am-1200pm/dealing-with-bias-and-unfairness-in-machine-learning-algorithms/"> Dealing with Bias and Unfairness in ML</a> at ACM Richard Tapia Celebration of Diversity in Computing, Orlando, FL.</li-->
+                        <!--li>09/2018. Invited Speaker, <a href="https://sites.google.com/view/sivl/">ECCV Workshop on Shortcomings in Vision and Language (SiVL)</a>, Munich, Germany.</li-->
+                        <!--li>03/2018. Keynote Speaker, <a href="http://ivl.ut.ee/index.php/Main/Programme">Integrating Vision and Language (iV&amp;L)</a> Conference, Tartu, Estonia.</li-->
+                        <!--li>02/2018. Received a <a href="https://research.googleblog.com/2018/03/google-faculty-research-awards-2017.html">Google Faculty Research Award 2017</a>. Thanks Google!</li>
+                        <li>01/2018. Received an <a href="https://www.research.ibm.com/university/awards/faculty_innovation_2017.shtml">IBM Faculty Award 2017</a>. Thanks IBM!</li-->
+                        <!--li>Quoted in The Cavalier Daily [<a href="http://www.cavalierdaily.com/article/2017/09/apples-face-id-recognizing-a-promising-future">1</a>] [<a href="http://www.cavalierdaily.com/article/2017/10/audio-manipulation-technology-has-the-potential-for-creating-fake-news">2</a>] and WIRED [<a href="https://www.wired.com/story/when-it-comes-to-gorillas-google-photos-remains-blind/">3</a>].</li-->
+                        <!--li>08/2017. Our work at UVA with UCLA's NLP Group gets coverage in <a href="https://www.wired.com/story/machines-taught-by-photos-learn-a-sexist-view-of-women/">WIRED</a>, <a href="http://www.dailymail.co.uk/sciencetech/article-4810982/AIs-learn-photos-sexist.html">Daily Mail</a>, <a href="https://www.thetimes.co.uk/article/home-robots-will-turn-into-crude-sexists-experts-warn-gnmj09rgq">The Times of London</a>, <a href="https://www.glamour.com/story/even-artificial-intelligence-is-sexist">Glamour</a>, <a href="https://www.bloomberg.com/news/articles/2017-12-04/researchers-combat-gender-and-racial-bias-in-artificial-intelligence">Bloomberg</a>.</li-->
+                        <!--li>09/2017. Best --Long-- Paper Award at <a href="http://emnlp2017.net/">EMNLP 2017</a>~!</li-->
+                        <!--li>2 long papers accepted to EMNLP 2017, 1 paper accepted to CVPR 2017</li-->
+                        <!--li>10/30/2016. Our work at the Allen Institute on accelerating neural networks gets featured in the <a href="http://www.nytimes.com/2016/10/31/technology/beyond-silicon-squeezing-more-out-of-chips.html">New York Times</a> and <a href="https://news.cs.washington.edu/2016/10/31/uw-cse-and-ai2-in-the-new-york-times-artificial-intelligence-at-your-fingertips/">UW CSE News</a>.</li-->
+                        <!--li>October 14th, 2016 - Presented at the <a href="https://pages.shanti.virginia.edu/DHUVA_Conference_9-16/schedule-registration/">DH@UVA Digital Humanities Conference</a>, and our group also got featured in <a href="https://www.news.virginia.edu/content/powerful-legacy-and-bright-future-digital-humanities">UVA Today</a> in a related note.</li>
+                        <li>Oct. 14th, 2016 - Our group's research gets a mention in <a href="https://www.news.virginia.edu/content/powerful-legacy-and-bright-future-digital-humanities">UVA Today</a>.</li>
+                        <li>July 1st, 2016 - Organized the <a href="http://www.cs.virginia.edu/~vicente/bigvision2016">BigVision</a> workshop at CVPR 2016.</li>
+                        <li>Advice to prospective graduate students interested in our group [<a href="note.html">here</a>]</li-->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="row no-gutters flex-md-row mb-2 position-relative">
+
+                <div class="col px-4 py-3 pb-2 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-0">Invited Talks</strong>
+                    <ul class="text-smaller p-2 m-0 ml-2">
+                        <li>07/23. Invited Talk for Shanghai AI lab. <br> 
+                            RFEPS and GCNO. 
+                        <li>07/23. Invited Talk for HIT (weihai). 
+                            <br> 
+                            RFEPS and GCNO.  </li>
+                        <li>08/22. Invited Talk at GDC 2022. 
+                            <br> 
+                            RFEPS. </li>
+                        <!--              <li>Introduction to Computer Vision [<a href="http://www.cs.rice.edu/~vo9/vision/2018">Spring 2018</a>] [<a href="http://www.cs.rice.edu/~vo9/vision/2019">Fall 2019</a>] [<a href="http://www.cs.rice.edu/~vo9/vision">Spring 2021</a>]</li>-->
+                        <!--              <li>Vision &amp; Language [<a href="http://www.cs.rice.edu/~vo9/vislang/2017">Spring 2017</a>] [<a href="http://www.cs.rice.edu/~vo9/vislang">Fall 2020</a>]</li>-->
+                        <!--		        	<li>Deep Learning for Visual Recognition [<a href="http://www.cs.rice.edu/~vo9/deeplearning/2019">Spring 2019</a>] [<a href="http://www.cs.rice.edu/~vo9/deeplearning">Spring 2020</a>] </li>-->
+                        <!--					    <li>Computational Visual Recognition [<a href="http://www.cs.rice.edu/~vo9/recognition/2016">Fall 2016</a>] [<a href="http://www.cs.rice.edu/~vo9/recognition/">Fall 2017</a>] </li>-->
+                    </ul>
+                    <strong class="d-inline-block mb-0">Internships</strong>
+                    <ul class="text-smaller p-2 m-0 ml-2">
+                        <li>Tencent Games. <br> 
+                            Research in Geometry Modeling, advised by <a href="https://clinplayer.github.io/">Cheng Lin</a>.
+                            <br> 
+                            Sep 2022 - Dec 2022 </li>
+
+                        <li>Alibaba. 
+                            <br> 
+                            Algorithm Engineer for Digital Twins with Unreal Development.
+                            <br> May 2020 - Sep 2020 </li>
+                        <!--              <li>Introduction to Computer Vision [<a href="http://www.cs.rice.edu/~vo9/vision/2018">Spring 2018</a>] [<a href="http://www.cs.rice.edu/~vo9/vision/2019">Fall 2019</a>] [<a href="http://www.cs.rice.edu/~vo9/vision">Spring 2021</a>]</li>-->
+                        <!--              <li>Vision &amp; Language [<a href="http://www.cs.rice.edu/~vo9/vislang/2017">Spring 2017</a>] [<a href="http://www.cs.rice.edu/~vo9/vislang">Fall 2020</a>]</li>-->
+                        <!--		        	<li>Deep Learning for Visual Recognition [<a href="http://www.cs.rice.edu/~vo9/deeplearning/2019">Spring 2019</a>] [<a href="http://www.cs.rice.edu/~vo9/deeplearning">Spring 2020</a>] </li>-->
+                        <!--					    <li>Computational Visual Recognition [<a href="http://www.cs.rice.edu/~vo9/recognition/2016">Fall 2016</a>] [<a href="http://www.cs.rice.edu/~vo9/recognition/">Fall 2017</a>] </li>-->
+                    </ul>
+                    <div class="subtext">
+                        <!--              I have also been co-organizing with students in my group a -->
+                        <!--              <a href="https://cs.rice.edu/~pc51/vislang_seminar/">Computer Vision seminar</a>, and from 2017-2021 co-directed with Paul Humphreys the -->
+                        <!--              <a href="http://hmi.virginia.edu">Human and Machine Intelligence seminar</a>.-->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-11">
+
+            <!--      <div class="row no-gutters flex-md-row mb-2 position-relative">-->
+            <!--        <div class="col px-4 py-3 pb-2 d-flex flex-column position-static">-->
+            <!--          <strong class="d-inline-block mb-0">Selected Publications</strong>-->
+            <!--          <ul class="text-smaller p-2 m-0 ml-2 mb-3">-->
+            <!--            <li>Building vision and language models with compositional representations.-->
+            <!--              <ul>-->
+            <!--                <li><a href="https://arxiv.org/abs/1809.01110" class="downgrade-link">Text2Scene: Generating Compositional Scenes from Textual Descriptions, CVPR 2019</a> [<strong><a href="https://www.vislang.ai/text2scene">demo</a></strong>] &#45;&#45; Best Paper Finalist.</li>-->
+            <!--                <li><a href="https://arxiv.org/abs/1911.03826" class="downgrade-link">Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries, NeurIPS 2019</a>.</li>-->
+            <!--              </ul>-->
+            <!--            </li>-->
+            <!--            <li>Uncovering and mitigating biases in vision and language models. -->
+            <!--                <ul>-->
+            <!--                  <li><a href="http://vicenteordonez.com/files/bias.pdf" class="downgrade-link">Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints, EMNLP 2017</a> &#45;&#45; Best Paper Award.</li>-->
+            <!--                  <li><a href="https://arxiv.org/abs/1811.08489" class="downgrade-link">Balanced Datasets Are Not Enough: Estimating and Mitigating Gender Bias in Deep Image Representations, ICCV 2019</a> [<strong><a href="https://www.vislang.ai/genderless">demo</a></strong>].</li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
+            <!--            <li>Improving the capabilities of deep learning models for visual and multimodal recognition. -->
+            <!--              <ul>-->
+            <!--                <li><a href="https://arxiv.org/abs/1710.08049" class="downgrade-link">Feedback-prop: Convolutional Neural Network Inference under Partial Evidence, CVPR 2018</a>. </li>-->
+            <!--                <li><a href="files/visualpivoting_findings_of_emnlp2020.pdf" class="downgrade-link">Using Visual Feature Space as a Pivot Across Languages, Findings of EMNLP 2020</a> [<strong><a href="https://www.vislang.ai/translator">demo</a></strong>].</li>-->
+            <!--              </ul>-->
+            <!--            </li>-->
+            <!--            <li>Transformer architectures for visual recognition. -->
+            <!--              <ul>-->
+            <!--                <li><a class="downgrade-link" href="https://arxiv.org/abs/2011.14027">General Multi-label Image Classification with Transformers, CVPR 2021</a></li>-->
+            <!--                <li><a class="downgrade-link" href="https://arxiv.org/abs/2103.12236">Instance-level Image Retrieval using Reranking Transformers, ICCV 2021 </a></li>-->
+            <!--              </ul>-->
+            <!--            </li>-->
+            <!--          </ul>-->
+            <!--        </div>-->
+            <!--      </div>-->
+
+        </div>
+    </div>
+
+</div>
+
+<main role="main" class="container blank-container">
+    <div class="row mx-0 mx-lg-2">
+        <div class="col-md-10 website-main">
+
+            <!--      <h3 class="pb-0 mb-4">-->
+            <!--        Whitepaper-->
+            <!--      </h3>-->
+            <!--    	<div class="blog-post subtext px-2 pt-2 pb-0">-->
+            <!--        <ul class="list-unstyled">-->
+            <!--          <li class="media">-->
+            <!--            <a href="https://global-uploads.webflow.com/5e027ca188c99e3515b404b7/5ed1145952bc185203f3d009_FRTsFederalOfficeMay2020.pdf">-->
+            <!--            	<img class="mr-3 rounded-lg" src="images/frts-image.png" width="80" alt="">-->
+            <!--            </a>-->
+            <!--            <div class="media-body">-->
+            <!--              <p class="my-auto">-->
+            <!--              <a class="blue_link" href="https://global-uploads.webflow.com/5e027ca188c99e3515b404b7/5ed1145952bc185203f3d009_FRTsFederalOfficeMay2020.pdf">Facial Recognition Technologies in the Wild: A Call for a Federal Office</a> <br/>-->
+            <!--              <a class="blue_link" href="https://global-uploads.webflow.com/5e027ca188c99e3515b404b7/5ed1002058516c11edc66a14_FRTsPrimerMay2020.pdf">Facial Recognition Technologies: A Primer</a> [Companion Document] <br/>-->
+            <!--              <span class="pub_authors">Erik Learned-Miller, Vicente Ord&oacute;&ntilde;ez, Jamie Morgenstern, Joy Buolamwini.</span>-->
+            <!--              <div class="text-muted font-italic">-->
+            <!--               This whitepaper makes the case for a federal office in charge of regulating Face Recognition Technologies (FRTs). -->
+            <!--               We argue that benchmarks are insufficient for determining the appropriateness for FRTs and a more holstic approach-->
+            <!--               is needed that takes into account technical, societal and legal challenges.-->
+            <!--          	  </div>-->
+            <!--          	  May 29th 2020. <a href="https://www.ajlunited.org/federal-office-call">https://www.ajlunited.org/federal-office-call</a>-->
+            <!--              </p>-->
+            <!--            </div>-->
+            <!--          </li>-->
+            <!--      	</ul>-->
+            <!--  	 	</div>-->
+
+            <!-- 	<h3 class="pb-0 mb-4">-->
+            <!--        Preprints-->
+            <!--  </h3>-->
+
+            <!--    <div class="blog-post subtext p-2">-->
+            <!--        <ul class="list-unstyled">-->
+
+            <!--          <li class="media">-->
+            <!--            <img class="mr-3 img-thumbnail" src="images/chairsegments.png" width="100" alt="">-->
+            <!--            <div class="media-body">-->
+            <!--              <p class="my-auto">-->
+            <!--              <a class="blue_link" href="https://www.cs.rice.edu/~vo9/lp2rv/websites/ChairSegments/">-->
+            <!--                Chair Segments: A Compact Benchmark for the Study of Object Segmentation-->
+            <!--              </a> <br/>-->
+            <!--              <span class="pub_authors d-lg-block">-->
+            <!--                Leticia Pinto-Alva, Ian K. Torres, Rosangel Garcia, Ziyan Yang, Vicente Ordonez-->
+            <!--              </span>-->
+            <!--              <span class="pub_info d-inline">-->
+            <!--                arxiv:2011.14027 Nov 2020.-->
+            <!--              </span>-->
+            <!--                [<a href="https://www.cs.rice.edu/~vo9/lp2rv/websites/ChairSegments/">project page</a>]-->
+            <!--                [<a href="https://github.com/uvavision/chair-segments">code</a>]-->
+            <!--                [<a href="https://arxiv.org/abs/2012.01250">arxiv</a>]-->
+            <!--                [<a href="files/chairsegments_arxiv_bib.txt">bibtex</a>]-->
+            <!--              </p>-->
+            <!--            </div>-->
+            <!--          </li>-->
+
+            <!--          <li class="media">-->
+            <!--            <img class="mr-3 img-thumbnail" src="images/moviescope.jpeg" width="100" alt="">-->
+            <!--            <div class="media-body">-->
+            <!--             <p class="my-auto">-->
+            <!--              <a class="blue_link" href="https://arxiv.org/abs/1908.03180">Moviescope: Large-scale Analysis of Movies using Multiple Modalities</a> <br/>-->
+            <!--              <span class="pub_authors">Paola Cascante-Bonilla, Kalpathy Sitaraman, Mengjia Luo, <a href="http://vicenteordonez.com">Vicente Ordonez</a>.  </span>-->
+            <!--              <br/><span class="pub_info">arXiv:1908.03180. August 2019. -->
+            <!--              [<a href="https://arxiv.org/abs/1908.03180">arxiv</a>] -->
+            <!--              [<a href="http://www.cs.virginia.edu/~pc9za/research/moviescope.html">project page</a>] -->
+            <!--              [<a href="http://vicenteordonez.com/files/moviescope.txt">bibtex</a>]<br/>-->
+            <!--              <span style="font-weight:bold;padding-left:20px">-->
+            <!--                <a href="https://techxplore.com/news/2019-08-features-movie-genre.html?fbclid=IwAR1oJnZw5WxkcDfaIMOmxZ4Oj9xyuXbkybQhep-aJgcTrRRNwYcooVSGOsA">-->
+            <!--                  - TechXplore News Coverage</a>-->
+            <!--                </span>-->
+            <!--              </p>-->
+            <!--            </div>-->
+            <!--          </li>-->
+
+
+            <!--    	</ul>-->
+            <!--    </div>-->
+
+
+            <h3 class="pb-0 mb-4">
+                Publications
+            </h3>
+
+            <div class="blog-post subtext p-2">
+                <ul class="list-unstyled">
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/RPimage.png" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+                                <span style="color:#e53333">NEW!</span>
+                                <a class="blue_link" href="https://xrvitd.github.io/Projects/GCNO/index.html">
+                                    Globally Consistent Normal Orientation for Point Clouds by Regularizing the Winding-Number Field
+                                </a>
+                                <span class="pub_authors  d-lg-block">
+                  <b>Rui Xu</b>, Zhiyang Dou, Ningna Wang, Shiqing Xin, Shuangmin Chen, Mingyan Jiang, Xiaohu Guo, Wenping Wang, Changhe Tu
+              </span>
+                                <span class="pub_info  d-lg-block">ACM Transactions on Graphics.  <strong> SIGGRAPH 2023</strong>.</span>
+                                <span class="pub_info  d-lg-block" style="color:#e53333"><strong> Selected for inclusion in the Technical Papers Video Trailer.</strong></span>
+                                <span class="pub_info  d-lg-block" style="color:#e53333"><strong> SIGGRAPH 2023 Technical Papers Best Paper Award.</strong></span>
+                                <span class="pub_info  d-lg-block"></span>
+
+                                [<a href="https://xrvitd.github.io/Projects/GCNO/index.html">Project Page</a>]
+                                [<a href="https://arxiv.org/abs/2304.11605">arxiv</a>]
+                                [<a href="https://youtu.be/08pOt5JqWJE">Video</a>]
+                                [<a href="https://github.com/Xrvitd/GCNO">code</a>]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/sgp.png" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+
+                                <a class="blue_link" href="https://arxiv.org/abs/2306.05246">
+                                    Mesh-MLP: An all-MLP Architecture for Mesh Classification and Semantic Segmentation
+                                </a>
+                                <span class="pub_authors  d-lg-block">
+                  Qiujie Dong , <b>Rui Xu</b>, Xiaoran Gong, Zixiong Wang, Shuangmin Chen, Shiqing Xin, Changhe Tu
+              </span>
+                                <span class="pub_info  d-lg-block">arXiv, 2023.</span>
+                                [<a href="https://arxiv.org/abs/2306.05246">Paper</a>]
+                
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/RP_SIGAsia_600dpi.jpg" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+
+                                <a class="blue_link" href="https://xrvitd.github.io/Projects/RFEPS/index.html">
+                                    RFEPS: Reconstructing Feature-line Equipped Polygonal Surface
+                                </a>
+                                <span class="pub_authors  d-lg-block">
+                  <b>Rui Xu</b>, Zixiong Wang, Zhiyang Dou, Chen Zong, Shiqing Xin*, Mingyan Jiang, Tao Ju, Changhe Tu*
+              </span>
+                                <span class="pub_info  d-lg-block">ACM Transactions on Graphics.  <strong> SIGGRAPH Asia 2022</strong>.</span>
+
+                                [<a href="https://xrvitd.github.io/Projects/RFEPS/index.html">Project Page</a>]
+                                [<a href="https://arxiv.org/abs/2212.03600">arxiv</a>]
+                                [<a href="https://youtu.be/iRP5z-JOCEc">Video</a>]
+                                [<a href="https://github.com/Xrvitd/RFEPS">code</a>]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/RPimage.jpg" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+
+                                <a class="blue_link" href="https://dl.acm.org/doi/abs/10.1145/3550454.3555453">
+                                    SurfaceVoronoi: Efficiently Computing Voronoi Diagrams over Mesh Surfaces with Arbitrary Distance Solvers
+                                </a>
+                                <span class="pub_authors  d-lg-block">
+                            Shiqing Xin, Pengfei Wang, <b>Rui Xu</b>, Dongming Yan, Shuangmin Chen*, Wenping Wang, Caiming Zhang, Changhe Tu
+              </span>
+                                <span class="pub_info  d-lg-block">ACM Transactions on Graphics.  <strong> SIGGRAPH Asia 2022</strong>.</span>
+                                <span style="color:#e53333"><strong> Selected to the Back Cover of TOG.</strong></span>
+                                [<a href="https://arxiv.org/abs/2212.09029">arxiv</a>]
+                                [<a href="https://github.com/sssomeone/SurfaceVoronoi">code</a>]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/tomm.png" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+
+                                <a class="blue_link" href="https://dl.acm.org/doi/abs/10.1145/3599729">
+                                    QuickCSGModeling: Quick CSG Operations Based on Fusing Signed Distance Fields for VR Modeling
+                                </a>
+                                <span class="pub_authors  d-lg-block">
+                  Shuangmin Chen*, <b>Rui Xu</b>, Jian Xu, Shiqing Xin, Changhe Tu, Chenglei Yang, Lin Lu
+              </span>
+                                <span class="pub_info  d-lg-block">ACM Transactions on Multimedia Computing, Communications, and Applications  <strong> ToMM 2023</strong>.</span>
+
+                                [<a href="https://dl.acm.org/doi/abs/10.1145/3599729">Paper</a>]
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/2022EGMA.png" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+                                <a class="blue_link" href="https://arxiv.org/abs/2110.00965">
+                                    Coverage Axis: Inner Point Selection for 3D Shape Skeletonization
+                                </a> <br/>
+                                <span class="pub_authors d-lg-block">
+                Zhiyang Dou, Cheng Lin, <b>Rui Xu</b>, Lei Yang, Shiqing Xin, Taku Komura, Wenping Wang
+              </span>
+                                <span class="pub_info d-inline">     Computer Graphics Forum. <strong>Eurographics 2022</strong>.     </span>
+                                <span class="pub_info  d-lg-block"></span>
+
+                                [<a href="https://frank-zy-dou.github.io/projects/CoverageAxis/index.html">Project Page</a>]
+                                [<a href="https://arxiv.org/abs/2110.00965">arxiv</a>]
+                                [<a href="https://github.com/Frank-ZY-Dou/Coverage_Axis">code</a>]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/2022EasyVRModeling.png" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+                                <a class="blue_link" href="https://dl.acm.org/doi/abs/10.1145/3522613">
+                                    EasyVRModeling: Easily Create 3D Models by an Immersive VR System
+                                </a> <br/>
+                                <span class="pub_authors d-lg-block">
+                Zhiying Fu, <b>Rui Xu</b>, Shiqing Xin, Shuangmin Chen, Changhe Tu, Chenglei Yang, Lin Lu
+              </span>
+                                <span class="pub_info d-inline">                ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games(<b>i3D</b>) 2022.              </span>
+
+                                [<a href="https://dl.acm.org/doi/abs/10.1145/3522613">paper</a>]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <img class="mr-3 img-thumbnail" src="images/ShapeAbstraction.png" width="200" alt="">
+                        <div class="media-body">
+                            <p class="my-auto">
+                                <a class="blue_link" href="https://arxiv.org/abs/1910.08954">
+                                    Top-Down Shape Abstraction Based on Greedy Pole Selection
+                                </a> <br/>
+                                <span class="pub_authors">
+                Zhiyang Dou, Shiqing Xin, <b>Rui Xu</b>, Jian Xu, Yuanfeng Zhou, Shuangmin Chen, Wenping Wang, Xiuyang Zhao, Changhe Tu
+              </span>
+                                <br/><span class="pub_info">IEEE Transactions on Visualization and Computer Graphics.  <strong> TVCG 2020</strong>.</span>
+                                <span class="pub_info  d-lg-block"></span>
+                                [<a href="https://arxiv.org/abs/1910.08954">arxiv</a>]
+                            </p>
+                        </div>
+                    </li>
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/eyecar.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1912.07773">-->
+                    <!--                MEDIRL: Predicting the Visual Attention of Drivers via Maximum Entropy Deep Inverse Reinforcement Learning.-->
+                    <!--              </a> -->
+                    <!--              <span class="pub_authors">-->
+                    <!--                Sonia Baee, Erfan Pakdamanian, Inki Kim, Lu Feng, Vicente Ordonez, Laura Barnes. -->
+                    <!--              </span>-->
+                    <!--              <br/><span class="pub_info">International Conference on Computer Vision <strong> ICCV 2021</strong>.</span>-->
+                    <!--              [<a href="https://soniabaee.github.io/projects/medirl-eyecar/medirl-eyecar.html">project page</a>]-->
+                    <!--              [<a href="https://github.com/soniabaee/MEDIRL-EyeCar">code</a>]-->
+                    <!--              [<a href="https://arxiv.org/abs/1912.07773">arxiv</a>] -->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/multi-label.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/2011.14027">-->
+                    <!--                General Multi-label Image Classification with Transformers-->
+                    <!--              </a> <br/>-->
+                    <!--              <span class="pub_authors d-lg-block">-->
+                    <!--                Jack Lanchantin, Tianlu Wang, Vicente Ordonez, Yanjun Qi.-->
+                    <!--              </span>-->
+                    <!--              <span class="pub_info">Conference on Computer Vision and Pattern Recognition <strong> CVPR 2021</strong>.</span>-->
+                    <!--                [<a href="https://arxiv.org/abs/2011.14027">arxiv</a>]-->
+                    <!--                [<a href="files/multilabel_arxiv_bib.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/drise.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/2006.03204">-->
+                    <!--                Black-box Explanation of Object Detectors via Saliency Maps-->
+                    <!--              </a> <br/>-->
+                    <!--              <span class="pub_authors">-->
+                    <!--                Vitali Petsiuk, Rajiv Jain, Varun Manjunatha, Vlad I. Morariu, Ashutosh Mehra, Vicente Ordonez, Kate Saenko.-->
+                    <!--              </span><br/>-->
+                    <!--              <span class="pub_info">Conference on Computer Vision and Pattern Recognition <strong> CVPR 2021</strong>.</span>-->
+                    <!--              [<a href="https://arxiv.org/abs/2006.03204">arxiv</a>]  <em style="color:#a00">(~Oral presentation)</em>-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/self-paced.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/2001.06001">Curriculum Labeling: Revisiting Pseudo-Labeling for Semi-Supervised Learning</a> <br/>-->
+                    <!--              <span class="pub_authors">Paola Cascante-Bonilla, Fuwen Tan, <a href="https://www.cs.virginia.edu/yanjun/">Yanjun Qi</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>.  </span>-->
+                    <!--              <br/><span class="pub_info">The 35th AAAI Conference on Artificial Intelligence. <strong>AAAI 2021</strong>. February 2021</span>-->
+                    <!--              [<a href="https://arxiv.org/abs/2001.06001">arxiv</a>] -->
+                    <!--              [<a href="https://github.com/uvavision/Curriculum-Labeling">code</a>]-->
+                    <!--              [<a href="http://vicenteordonez.com/files/self-paced.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/cacm2020.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--                 <a class="blue_link" href="https://cacm.acm.org/magazines/2020/12/248803-enabling-ai-at-the-edge-with-xnor-networks/fulltext">Enabling AI at the Edge with XNOR-Networks</a> <br/>-->
+                    <!--                <span class="pub_authors">Mohammad Rastegari, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="http://pjreddie.com/">Joseph Redmon</a>, <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a></span>. -->
+                    <!--                <br/><span class="pub_info"> <strong>Communications of the ACM</strong>. December 2020 (Vol. 62, No. 12).</span> <em style="color:#a00">(~Research Highlight)</em>-->
+                    <!--                <br/>-->
+                    <!--                [<a href="https://cacm.acm.org/magazines/2020/12/248803-enabling-ai-at-the-edge-with-xnor-networks/fulltext">link</a>] -->
+                    <!--                [<a href="http://vicenteordonez.com/files/cacm2020_bib.txt">bibtex</a>]-->
+                    <!--                </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/visual-pivoting.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://www.cs.rice.edu/~vo9/visual-pivot">Using Visual Feature Space as a Pivot Across Languages</a> <br/>-->
+                    <!--              <span class="pub_authors">Ziyan Yang, Leticia Pinto-Alva, Franck Dernoncourt, Vicente Ordonez.</span>-->
+                    <!--              <span class="pub_info">Findings of the Association for Computational Linguistics: <strong>Findings of EMNLP 2020</strong>.</span>-->
+                    <!--              [<a href="files/visualpivoting_findings_of_emnlp2020.pdf">pdf</a>]-->
+                    <!--              [<a href="http://www.cs.rice.edu/~vo9/visual-pivot">project page</a>]-->
+                    <!--              [<a href="https://github.com/uvavision/visual-pivoting">code</a>]-->
+                    <!--              [<a href="files/visual-pivoting.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/double-hard.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/2005.00965">Double-Hard Debias: Tailoring Word Embeddings for Gender Bias Mitigation</a> <br/>-->
+                    <!--              <span class="pub_authors">Tianlu Wang, Xi Victoria Lin, Nazneen Fatema Rajani, Bryan McCann, Vicente Ordonez, Caiming Xiong.</span>-->
+                    <!--              <span class="pub_info">Association for Computational Linguistics. <strong>ACL 2020</strong>. Seattle, Washington. July 2020.</span>-->
+                    <!--              [<a href="https://arxiv.org/abs/2005.00965">arxiv</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/openset.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://openaccess.thecvf.com/content_CVPR_2020/html/Perera_Generative-Discriminative_Feature_Representations_for_Open-Set_Recognition_CVPR_2020_paper.html"> Generative-discriminative Feature Representations for Open-set Recognition</a> <br/>-->
+                    <!--              <span class="pub_authors">P. Perera, V. Morariu, R. Jain, V. Manjunatha, C. Wigington, V. Ordonez,  and V. M. Patel.</span>-->
+                    <!--              <span class="pub_info">Conference on Computer Vision and Pattern Recognition <strong> CVPR 2020</strong>.</span>-->
+                    <!--              [<a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Perera_Generative-Discriminative_Feature_Representations_for_Open-Set_Recognition_CVPR_2020_paper.pdf">pdf</a>] [<a href="http://openaccess.thecvf.com/content_CVPR_2020/html/Perera_Generative-Discriminative_Feature_Representations_for_Open-Set_Recognition_CVPR_2020_paper.html">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/testing.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1905.07831">Testing DNN Image Classifiers for Confusion &amp; Bias Errors</a> <br/>-->
+                    <!--              <span class="pub_authors">Yuchi Tian, Ziyuan Zhong, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, Gail Kaiser, <a href="http://rayb.info/">Baishakhi Ray</a>.  </span>-->
+                    <!--              <br/><span class="pub_info">International Conference on Software Engineering. <strong>ICSE 2020</strong>. Seoul, South Korea, October 2020. -->
+                    <!--              [<a href="https://arxiv.org/abs/1905.07831">arxiv</a>] [<a href="http://vicenteordonez.com/files/testing_bib.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/drilldown.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1911.03826">Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries</a> <br/>-->
+                    <!--              <span class="pub_authors">Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, <a href="https://www.spacewu.com/">Hui Wu</a>, <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-sfeng">Song Feng</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>.  </span>-->
+                    <!--              <span class="pub_info">Conf. on Neural Information Processing Systems. <strong>NeurIPS 2019</strong>. Vancouver, Canada. December 2019. -->
+                    <!--              [<a href="https://arxiv.org/abs/1911.03826">arxiv</a>] [<a href="https://github.com/uvavision/DrillDown">code</a>] [<a href="http://vicenteordonez.com/files/drilldown.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/debias.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://www.cs.virginia.edu/~tw8cb/balanced_datasets_not_enough">Balanced Datasets Are Not Enough: Estimating and Mitigating Gender Bias in Deep Image Representations</a><br/>-->
+                    <!--              <span class="pub_authors">Tianlu Wang, Jieyu Zhao, <a href="http://markyatskar.com/">Mark Yatskar</a>, <a href="http://www.cs.virginia.edu/~kc2wc/">Kai-Wei Chang</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>.  </span>-->
+                    <!--              <span class="pub_info">International Conference on Computer Vision. <strong>ICCV 2019</strong>. Seoul, South Korea. October 2019. -->
+                    <!--              [<a href="https://arxiv.org/abs/1811.08489">arxiv</a>]-->
+                    <!--              [<a href="http://www.cs.virginia.edu/~tw8cb/balanced_datasets_not_enough">project page</a>]-->
+                    <!--              [<a href="https://github.com/uvavision/Balanced-Datasets-Are-Not-Enough">code</a>] -->
+                    <!--              [<a href="https://www.vislang.ai/genderless">demo</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/gendervision.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/text2scene.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--                <a class="blue_link" href="https://arxiv.org/abs/1809.01110">Text2Scene: Generating Compositional Scenes from Textual Descriptions</a> <br/>-->
+                    <!--                <span class="pub_authors">Fuwen Tan, <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-sfeng">Song Feng</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a></span>. <span class="pub_info">Intl. Conference on Computer Vision and Pattern Recognition. <strong>CVPR 2019</strong>. Long Beach, California. June 2019.</span> -->
+                    <!--                [<a href="https://arxiv.org/abs/1809.01110">arxiv</a>] -->
+                    <!--                [<a href="https://github.com/uvavision/Text2Scene">code</a>] -->
+                    <!--                [<a href="https://www.vislang.ai/text2scene">demo</a>] -->
+                    <!--                [<a href="http://vicenteordonez.com/files/text2scene_bib.txt">bibtex</a>]-->
+                    <!--                <br/> <em style="color:#a00">(~Oral presentation + Best Paper Finalist <span style="font-size:0.8em;font-weight:lighter;"> &#45;&#45; top 1% of submissions</span>)</em><br/>-->
+                    <!--                <span style="font-weight:bold;padding-left:20px"><a href="https://www.ibm.com/blogs/research/2019/06/text2scene-textual-descriptions/">- IBM Research Blog Coverage</a></span><br/>-->
+                    <!--                <span style="font-weight:bold;padding-left:20px"><a href="https://news.developer.nvidia.com/ai-model-can-generate-images-from-natural-language-descriptions/">- NVIDIA News Coverage</a>-->
+                    <!--                </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--           <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/bias-nlp.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--               <a class="blue_link" href="#">Gender Bias in Contextualized Word Embeddings</a> <br/>-->
+                    <!--              <span class="pub_authors">Jieyu Zhao, Tianlu Wang, <a href="http://markyatskar.com/">Mark Yatskar</a>, <a href="https://ryancotterell.github.io/">Ryan Cotterell</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="http://www.cs.virginia.edu/~kc2wc/">Kai-Wei Chang</a>.  </span>-->
+                    <!--              <span class="pub_info">North American Chapter of the Association for Computational Linguistics. <strong>NAACL 2019</strong>. short. Minneapolis, Minnesota. June 2019.</span> -->
+                    <!--              [<a href="https://arxiv.org/abs/1904.03310">arxiv</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/genderbiaselmo_bib.txt">bibtex</a>] <em style="color:#a00">(~Oral presentation)</em>-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--           <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/chatcrowd3.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--               <a class="blue_link" href="https://chatcrowd.github.io/">Chat-crowd: A Dialog-based Platform for Visual Layout Composition</a> <br/>-->
+                    <!--              <span class="pub_authors">Paola Cascante-Bonilla, Xuwang Yin, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-sfeng">Song Feng</a>.  </span>-->
+                    <!--              <span class="pub_info">North American Chapter of the Association for Computational Linguistics. <strong>NAACL 2019</strong>. System Demonstrations. Minneapolis, Minnesota. June 2019.</span>-->
+                    <!--              [<a href="https://arxiv.org/abs/1812.04081">arxiv</a>] -->
+                    <!--              [<a href="https://chatcrowd.github.io/">project page</a>] -->
+                    <!--              [<a href="https://github.com/uvavision/chat-crowd">code</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--           <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/multimedia.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1805.08587">Deep Feature Aggregation and Image Re-ranking with Heat Diffusion for Image Retrieval</a><br/>-->
+                    <!--              <span class="pub_authors">Shanmin Pang, Jin Ma, Jianru Xue, Jihua Zhu, Vicente Ordonez.  </span>-->
+                    <!--              <br/><span class="pub_info"><strong>IEEE Transactions on Multimedia 2019</strong> (Journal). [Accepted October 2018].</span><br/>-->
+                    <!--              [<a href="https://arxiv.org/abs/1805.08587">arxiv</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/multimedia.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--           <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/feedbackprop.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://www.cs.virginia.edu/~tw8cb/feedback_prop/">Feedback-prop: Convolutional Neural Network Inference under Partial Evidence</a> <br/>-->
+                    <!--              <span class="pub_authors"><a href="http://www.cs.virginia.edu/~tw8cb/">Tianlu Wang</a>, <a href="http://vision.is.tohoku.ac.jp/~kyamagu/">Kota Yamaguchi</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a></span>. <span class="pub_info">Intl. Conference on Computer Vision and Pattern Recognition. <strong>CVPR 2018</strong>. Salt Lake City, Utah. June 2018.</span> -->
+                    <!--              [<a href="https://arxiv.org/pdf/1710.08049.pdf">pdf</a>] -->
+                    <!--              [<a href="http://www.cs.virginia.edu/~tw8cb/feedback_prop/">project page</a>]-->
+                    <!--              [<a href="https://arxiv.org/abs/1710.08049">arXiv</a>] -->
+                    <!--              [<a href="https://github.com/uvavision/feedbackprop">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/feedbackprop_bib.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/bias-nlp.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1804.06876">Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods</a> <br/>-->
+                    <!--              <span class="pub_authors">Jieyu Zhao, Tianlu Wang, <a href="http://markyatskar.com/">Mark Yatskar</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="http://www.cs.virginia.edu/~kc2wc/">Kai-Wei Chang</a>.  </span>-->
+                    <!--              <br/><span class="pub_info">North American Chapter of the Association for Computational Linguistics. <strong>NAACL 2018</strong>. short. New Orleans, Louisiana. June 2018.</span>-->
+                    <!--              [<a href="http://vicenteordonez.com/files/winobias.pdf">pdf</a>] -->
+                    <!--              [<a href="https://arxiv.org/abs/1804.06876">arXiv</a>] -->
+                    <!--              [<a href="https://github.com/uclanlp/corefBias">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/coref_bias.txt">bibtex</a>] -->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--           <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/pr2018.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://www.sciencedirect.com/science/article/pii/S0031320318301808">-->
+                    <!--                Building Discriminative CNN Image Representations for Object Retrieval using the Replicator Equation-->
+                    <!--              </a><br/>-->
+                    <!--              <span class="pub_authors">Shanmin Pang, Jihua Zhu, Jiaxing Wang, Vicente Ordonez, Jianru Xue.  </span><br/>-->
+                    <!--              <span class="pub_info"><strong>Pattern Recognition 2018</strong> (Journal). Volume 83. Pages 150-160.</span><br/>-->
+                    <!--              [<a href="https://www.sciencedirect.com/science/article/pii/S0031320318301808">link</a>] -->
+                    <!--              [<a href="https://github.com/pangsm0415/ReSW">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/pr2018.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/composition.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1706.01021">Where and Who? Automatic Semantic-Aware Person Composition</a> <br/>-->
+                    <!--              <span class="pub_authors">Fuwen Tan, Crispin Bernier, Benjamin Cohen, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, Connelly Barnes.  </span>-->
+                    <!--              <br/><span class="pub_info">Winter Conference on Applications of Computer Vision. <strong>WACV 2018</strong>. Lake Tahoe, Nevada. March 2018.</span><br/>-->
+                    <!--              [<a href="http://vicenteordonez.com/files/wacv18.pdf">pdf</a>] -->
+                    <!--              [<a href="https://arxiv.org/abs/1706.01021">arXiv</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/wacv18_supp.pdf">supp. material</a>] -->
+                    <!--              [<a href="https://github.com/fwtan/who_where">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/TanBCOB17.txt">bibtex</a>]-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/bias.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://vicenteordonez.com/files/bias.pdf">Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints</a>. <br/>-->
+                    <!--              <span class="pub_authors">Jieyu Zhao, Tianlu Wang, <a href="http://markyatskar.com/">Mark Yatskar</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="http://www.cs.virginia.edu/~kc2wc/">Kai-Wei Chang</a>.  </span>-->
+                    <!--              <br/><span class="pub_info">Empirical Methods in Natural Language Processing. <strong>EMNLP 2017</strong>. Copenhagen, Denmark. September 2017.</span>-->
+                    <!--              [<a href="http://vicenteordonez.com/files/bias.pdf">pdf</a>] -->
+                    <!--              [<a href="https://github.com/uclanlp/reducingbias">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/biasemnlp.txt">bibtex</a>]-->
+                    <!--              <em style="color:#a00">(~Oral presentation + Best Long Paper Award!)</em><br/>-->
+                    <!--              <span style="font-weight:bold;padding-left:20px"><a href="https://www.wired.com/story/machines-taught-by-photos-learn-a-sexist-view-of-women/">- WIRED News Coverage</a></span><br/>-->
+                    <!--              <span style="font-weight:bold;padding-left:20px"><a href="http://www.dailymail.co.uk/sciencetech/article-4810982/AIs-learn-photos-sexist.html">- Daily Mail News Coverage</a></span><br/>-->
+                    <!--              <span style="font-weight:bold;padding-left:20px"><a href="https://www.thetimes.co.uk/article/home-robots-will-turn-into-crude-sexists-experts-warn-gnmj09rgq">- Times of London News Coverage</a></span>-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/obj2text.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://vision.cs.virginia.edu/obj2text">Obj2Text: Generating Visually Descriptive Language from Object Layouts</a> <br/>-->
+                    <!--              <span class="pub_authors">Xuwang Yin, <a href="http://vicenteordonez.com">Vicente Ordonez</a>.  </span>-->
+                    <!--              <span class="pub_info">Empirical Methods in Natural Language Processing. <strong>EMNLP 2017</strong>. Copenhagen, Denmark. September 2017.</span>-->
+                    <!--              [<a href="http://vicenteordonez.com/files/obj2text.pdf">pdf</a>] -->
+                    <!--              [<a href="https://arxiv.org/abs/1707.07102">arxiv</a>] -->
+                    <!--              [<a href="https://github.com/uvavision/obj2text-neuraltalk2">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/obj2text.txt">bibtex</a>]-->
+                    <!--              <em style="color:#a00">(~Oral presentation)</em>-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--           <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/imsitu.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="https://arxiv.org/abs/1612.00901">Commonly Uncommon: Semantic Sparsity in Situation Recognition</a> <br/>-->
+                    <!--              <span class="pub_authors"><a href="http://markyatskar.com/">Mark Yatskar</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="https://www.cs.washington.edu/people/faculty/lsz">Luke Zettlemoyer</a>, <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a></span>.  -->
+                    <!--              <br/><span class="pub_info">Intl. Conference on Computer Vision and Pattern Recognition. <strong>CVPR 2017</strong>. Honolulu, Hawaii. July 2017.</span>-->
+                    <!--              [<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Yatskar_Commonly_Uncommon_Semantic_CVPR_2017_paper.pdf">pdf</a>] -->
+                    <!--              [<a href="https://arxiv.org/abs/1612.00901">arXiv</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/commonly_uncommon_bib.txt">bibtex</a>] -->
+                    <!--              [<a href="http://imsitu.org/demo">demo</a>] -->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/xnornet.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://arxiv.org/abs/1603.05279">XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks</a> <br/>-->
+                    <!--              <span class="pub_authors">Mohammad Rastegari, <a href="http://vicenteordonez.com">Vicente Ordonez</a>, <a href="http://pjreddie.com/">Joseph Redmon</a>, <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a></span>. -->
+                    <!--              <br/><span class="pub_info">European Conference on Computer Vision. <strong>ECCV 2016</strong>. Amsterdam, The Netherlands. October 2016.</span>-->
+                    <!--              [<a href="http://arxiv.org/abs/1603.05279">arXiv</a>] -->
+                    <!--              [<a href="http://allenai.org/plato/xnornet/">project page</a>] -->
+                    <!--              [<a href="https://github.com/allenai/XNOR-Net">code</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/xnornet_bib.txt">bibtex</a>]-->
+                    <!--              <em style="color:#a00">(~Oral presentation)</em><br/>-->
+                    <!--              <span style="font-weight:bold;padding-left:20px"><a href="http://www.nytimes.com/2016/10/31/technology/beyond-silicon-squeezing-more-out-of-chips.html">- New York Times News Coverage</a></span><br/>-->
+                    <!--              <span style="font-weight:bold;padding-left:20px"><a href="https://news.cs.washington.edu/2016/10/31/uw-cse-and-ai2-in-the-new-york-times-artificial-intelligence-at-your-fingertips/">- Article on University of Washington News</a></span>-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/commonsense.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p class="my-auto">-->
+                    <!--              <a class="blue_link" href="http://vicenteordonez.com/files/naacl2016.pdf">Stating the Obvious: Extracting Visual Common Sense Knowledge</a> <br/>-->
+                    <!--              <span class="pub_authors"><a href="http://markyatskar.com/">Mark Yatskar</a>, <a href="http://vicenteordonez.com">Vicente Ordonez</a>,  <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a></span>. -->
+                    <!--              <span class="pub_info"> North American Chapter of the Association for Computational Linguistics. <strong>NAACL 2016</strong>. short. San Diego, CA. June 2016.</span>-->
+                    <!--              [<a href="http://vicenteordonez.com/files/naacl2016.pdf">pdf</a>] -->
+                    <!--              [<a href="http://vicenteordonez.com/files/naacl2016_bib.txt">bibtex</a>]-->
+                    <!--              <em style="color:#a00">(~Oral presentation)</em>-->
+                    <!--              </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/cacm.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p class="my-auto">-->
+                    <!--                 <a class="blue_link" href="http://vicenteordonez.com/files/cacm2016.pdf">Learning to Name Objects</a> <br/>-->
+                    <!--                <span class="pub_authors"><a href="http://vicenteordonez.com">Vicente Ordonez</a>, Wei Liu, <a href="http://web.eecs.umich.edu/~jiadeng/">Jia Deng</a>, <a href="http://homes.cs.washington.edu/~yejin/">Yejin Choi</a>, <a href="http://acberg.com">Alexander C. Berg</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>. -->
+                    <!--                <br/><span class="pub_info"> <strong>Communications of the ACM</strong>. March 2016 (Vol. 59, No. 3).</span> <em style="color:#a00">(~Research Highlight)</em>-->
+                    <!--                <br/>-->
+                    <!--                [<a href="http://vicenteordonez.com/files/cacm2016.pdf">pdf</a>] -->
+                    <!--                [<a href="http://cacm.acm.org/magazines/2016/3/198851-learning-to-name-objects/fulltext">link</a>] -->
+                    <!--                [<a href="http://cacm.acm.org/magazines/2016/3/198875-technical-perspective-taming-the-name-game/fulltext">technical perspective</a>] -->
+                    <!--                [<a href="http://vicenteordonez.com/files/cacm_bib.txt">bibtex</a>]-->
+                    <!--                </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/whatshouldicallit.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="files/ijcv_entrylevel.pdf">Predicting Entry-Level Categories</a> <br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">Vicente Ordonez</a>, Wei Liu, <a href="http://web.eecs.umich.edu/~jiadeng/">Jia Deng</a>, <a href="http://homes.cs.washington.edu/~yejin/">Yejin Choi</a>, <a href="http://acberg.com">Alexander C. Berg</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>. -->
+                    <!--				<br/><span class="pub_info"> International Journal of Computer Vision - Marr Prize Special Issue. <strong>IJCV 2015</strong>.</span>-->
+                    <!--        <br/>-->
+                    <!--        [<a href="files/ijcv_entrylevel.pdf">pdf</a>] -->
+                    <!--        [<a href="http://link.springer.com/article/10.1007/s11263-015-0815-z">link</a>]-->
+                    <!--				[<a href="files/ijcv_entrylevel_bib.txt">bibtex</a>]-->
+                    <!--			  </p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/generation.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p>-->
+                    <!--				<a class="blue_link" href="files/ijcv_bigdata.pdf">Large Scale Retrieval and Generation of Image Descriptions</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">V. Ordonez</a>, X. Han, P. Kuznetsova, G. Kulkarni, M. Mitchell, K. Yamaguchi, K. Stratos, <br/>A. Goyal, J. Dodge, A. Mensch, H. Daume III, A.C. Berg, Y. Choi, T.L. Berg</span>. -->
+                    <!--				<br/><span class="pub_info"> International Journal of Computer Vision. <strong>IJCV 2015</strong>. [August 2016 Issue].</span>-->
+                    <!--        [<a href="files/ijcv_bigdata.pdf">pdf</a>] -->
+                    <!--        [<a href="http://dx.doi.org/10.1007/s11263-015-0840-y">link</a>]-->
+                    <!--				[<a href="files/ijcv_bigdata_bib.txt">bibtex</a>]-->
+                    <!--			</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3" src="images/unc_seal_blue.jpg" width="80" alt="">-->
+                    <!--            <div class="media-body ml-4">-->
+                    <!--             <p>-->
+                    <!--				Ph.D. Thesis. [<a href="files/thesis_4-24-2015.pdf">pdf</a>] [<a href="files/thesis_4-24-2015_bib.txt">bibtex</a>]-->
+                    <!--				<br/> Language and Perceptual Categorization in Computational Visual Recognition.<br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">Vicente Ord&oacute;&ntilde;ez Rom&aacute;n</a>. April 2015.</span>-->
+                    <!--				<br/>Department of Computer Science. The University of North Carolina at Chapel Hill. </span>-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/referitgame.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--            <p>-->
+                    <!--				<a class="blue_link" href="http://tamaraberg.com/referitgame/">ReferItGame: Referring to Objects in Photographs of Natural Scenes</a><br/>-->
+                    <!--				<span class="pub_authors">Sahar Kazemzadeh, <a href="index.html">Vicente Ordonez</a>, Mark Matten, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>. -->
+                    <!--				<br/><span class="pub_info"> Empirical Methods on Natural Language Processing. <strong>EMNLP 2014</strong>. Doha, Qatar. October 2014.</span>-->
+                    <!--        [<a href="files/referit.pdf">pdf</a>] -->
+                    <!--        [<a href="http://www.cs.rice.edu/~vo9/referit/">project page</a>] -->
+                    <!--        [<a href="http://referitgame.com">game</a>]-->
+                    <!--				[<a href="files/referit_bib.txt">bibtex</a>] -->
+                    <!--				<em style="color:#a00">(~Oral presentation)</em>-->
+                    <!--			</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/urban.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p>-->
+                    <!--				<a class="blue_link" href="http://www.cs.rice.edu/~vo9/urban/index.html">Learning High-level Judgments of Urban Perception</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">Vicente Ordonez</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>. -->
+                    <!--				<br/><span class="pub_info"> European Conference on Computer Vision. <strong>ECCV 2014</strong>. Zurich, Switzerland. September 2014.</span>-->
+                    <!--        [<a href="urban/vicente_eccv14.pdf">pdf</a>]-->
+                    <!--        [<a href="http://www.cs.rice.edu/~vo9/urban/index.html">project page</a>]-->
+                    <!--				[<a href="files/vicente_eccv14_bib.txt">bibtex</a>]-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/treetalk.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="files/treetalk_camera_ready.pdf">TreeTalk: Composition and Compression of Trees for Image Descriptions</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="http://www.cs.stonybrook.edu/~pkuznetsova">Polina Kuznetsova, <a href="index.html">Vicente Ordonez</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a>, <a href="http://homes.cs.washington.edu/~yejin/">Yejin Choi</a></span>. -->
+                    <!--        <br/><span class="pub_info"> Transactions of the Association for Computational Linguistics. <strong>TACL 2014</strong>. <br/>To be presented at EMNLP 2014 in Doha, Qatar. October 2014.</span> -->
+                    <!--        [<a href="files/treetalk_camera_ready.pdf">pdf</a>]-->
+                    <!--				[<a href="files/treetalk_camera_ready_bib.txt">bibtex</a>]-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/furniture2.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p>-->
+                    <!--				<span style="color:#e53333;font-family:Helvetica"></span> <a class="blue_link" href="files/furnituregeek.pdf">Furniture-Geek: Understanding Fine-Grained Furniture Attributes-->
+                    <!--				from Freely Associated Text and Tags</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">Vicente Ordonez, <a href="http://labs.ebay.com/people/vignesh-jagadeesh/">Vignesh Jagadeesh</a>, <a href="#">Wei Di</a>, <a href="#">Anurag Bhardwaj</a>, <a href="http://labs.ebay.com/people/robinson-piramuthu/">Robinson Piramuthu</a></span>. -->
+                    <!--				<span class="pub_info">IEEE Winter Conference on Applications of Computer Vision. <strong>WACV 2014</strong>. Steamboat Springs, CO. March 2014.</span>-->
+                    <!--        [<a href="files/furnituregeek.pdf">pdf</a>] -->
+                    <!--        [<a href="files/furnituregeek_bib.txt">bibtex</a>]-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/whatshouldicallit.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="http://www.cs.rice.edu/~vo9/entrylevel/index.html">From Large Scale Image Categorization to Entry-Level Categories</a> <br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">Vicente Ordonez</a>, <a href="http://ai.stanford.edu/~jiadeng/">Jia Deng</a>, <a href="http://homes.cs.washington.edu/~yejin/">Yejin Choi</a>, <a href="http://acberg.com">Alexander C. Berg</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>. -->
+                    <!--				<br/><span class="pub_info">IEEE International Conference on Computer Vision. <strong>ICCV 2013</strong>. Sydney, Australia. December 2013.</span>-->
+                    <!--        [<a href="files/entrylevel.pdf">pdf</a>] -->
+                    <!--        [<a href="files/entrylevel_supplemental.pdf">supplemental material</a>] -->
+                    <!--        [<a href="entrylevel/iccv2013_slides.pptx">slides</a>] -->
+                    <!--        [<a href="http://www.cs.rice.edu/~vo9/entrylevel/index.html">project page</a>] -->
+                    <!--        [<a href="files/entrylevel_bib.txt">bibtex</a>] <em style="color:#a00">(~Oral Presentation + Best Paper Award - Marr Prize!)</em>-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/generalizing.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--              <p>-->
+                    <!--				<a class="blue_link" href="files/acl13_generalization.pdf">Generalizing Image Captions for Image-Text Parallel Corpus</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="http://www.cs.stonybrook.edu/~pkuznetsova">Polina Kuznetsova, <a href="index.html">Vicente Ordonez</a>, <a href="http://acberg.com">Alexander C. Berg</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a>, <a href="http://homes.cs.washington.edu/~yejin/">Yejin Choi</a></span>. -->
+                    <!--				<br/><span class="pub_info">Association for Computational Linguistics. <strong>ACL 2013</strong>. short. Sofia, Bulgaria. August 2013.</span>-->
+                    <!--        [<a href="files/acl13_generalization.pdf">pdf</a>] -->
+                    <!--        [<a href="http://www.cs.stonybrook.edu/~pkuznetsova/imgcaption/">data+results</a>]-->
+                    <!--				[<a href="files/acl13_generalization_bib.txt">bibtex</a>]-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/babytalk2.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="files/babytalk_pami13.pdf">Baby Talk: Understanding and Generating Simple Image Descriptions</a><br/>-->
+                    <!--				<span class="pub_authors">G. Kulkarni, V. Premraj, <a href="index.html">V. Ordonez</a>, S. Dhar, S. Li, <a href="http://homes.cs.washington.edu/~yejin/">Y. Choi</a>, <a href="http://acberg.com">A. C. Berg</a>, <a href="http://tamaraberg.com">T. L. Berg</a></span>. -->
+                    <!--				<br/><span class="pub_info"> IEEE Transactions on Pattern Analysis and Machine Intelligence. <strong>PAMI 2013</strong></span>-->
+                    <!--        <br/>-->
+                    <!--        [<a href="files/babytalk_pami13.pdf">pdf</a>] -->
+                    <!--        [<a href="http://dx.doi.org/10.1109/TPAMI.2012.162">link</a>] -->
+                    <!--				[<a href="files/babytalk_pami13_bib.txt">bibtex</a>]-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/acl.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="files/acl12_generation.pdf">Collective Generation of Natural Image Descriptions</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="http://www.cs.stonybrook.edu/~pkuznetsova">Polina Kuznetsova, <a href="index.html">Vicente Ordonez</a>, <a href="http://acberg.com">Alexander C. Berg</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a>, <a href="http://homes.cs.washington.edu/~yejin/">Yejin Choi</a></span>. -->
+                    <!--				<br/><span class="pub_info"> Association for Computational Linguistics. <strong>ACL 2012</strong>. Jeju, South Korea. July 2012.</span>-->
+                    <!--        <br/>-->
+                    <!--        [<a href="files/acl12_generation.pdf">pdf</a>] -->
+                    <!--        [<a href="http://tlberg.cs.unc.edu/~vicente/clsp11/SBU_Captioned_Photo_Dataset_v1.1.tgz">data</a>]-->
+                    <!--				[<a href="files/acl12_generation_bib.txt">bibtex</a>]-->
+                    <!--				<em style="color:#a00">(~Oral presentation)</em>-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/im2text.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="http://www.cs.rice.edu/~vo9/sbucaptions">Im2Text: Describing Images Using 1 Million Captioned Photographs</a><br/>-->
+                    <!--				<span class="pub_authors"><a href="index.html">Vicente Ordonez</a>, Girish Kulkarni, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>.-->
+                    <!--				<br/><span class="pub_info">Conf. in Neural Information Processing Systems. <strong>NeurIPS 2011</strong>. Granada, Spain. December 2011.</span>-->
+                    <!--        [<a href="files/generation_nips2011.pdf">pdf</a>] -->
+                    <!--        [<a href="http://www.cs.rice.edu/~vo9/sbucaptions/">code+dataset</a>] -->
+                    <!--        [<a href="files/im2text_nips11_poster.pdf">poster</a>]  -->
+                    <!--        &lt;!&ndash;[<a href="http://tlberg.cs.unc.edu/vicente/python_server_files/py/website/search.py">search tool</a>]&ndash;&gt; -->
+                    <!--        [<a href="https://www.vislang.ai/sbu-explore">search tool</a>]-->
+                    <!--        [<a href="files/generation_nips2011_bib.txt">bibtex</a>]-->
+                    <!--				<em style="color:#a00">(~Spotlight presentation)</em>-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/aesthetics.png" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="files/aesthetics_cvpr11.pdf">High Level Describable Attributes for Predicting Aesthetics and Interestingness</a><br/>-->
+                    <!--				<span class="pub_authors">Sagnik Dhar, <a href="index.html">Vicente Ordonez</a>, <a href="http://tamaraberg.com">Tamara L. Berg</a></span>. -->
+                    <!--				<br/><span class="pub_info">IEEE Computer Vision and Pattern Recognition. <strong>CVPR 2011</strong>. Colorado Springs, CO. June 2011.</span> -->
+                    <!--        [<a href="files/aesthetics_cvpr11.pdf">pdf</a>] -->
+                    <!--        [<a href="code.html">related code for saliency + low DoF attributes</a>]-->
+                    <!--				[<a href="files/aesthetics_cvpr11_bib.txt">bibtex</a>] -->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                    <!--          <li class="media">-->
+                    <!--            <img class="mr-3 img-thumbnail" src="images/ariadne.jpg" width="100" alt="">-->
+                    <!--            <div class="media-body">-->
+                    <!--             <p>-->
+                    <!--				<a class="blue_link" href="http://dx.doi.org/10.1109/MIC.2009.90">The Ariadne Infrastructure for Managing and Storing Metadata</a><br/>-->
+                    <!--				<span class="pub_authors">S. Ternier, G. Parra, B. Vandeputte, K. Verbert, J. Klerkx, <a href="http://www.cs.kuleuven.ac.be/~erikd/">E. Duval</a>, <a href="index.html">V. Ordonez</a>, <a href="http://ariadne.cti.espol.edu.ec/xavier">X. Ochoa</a></span>. -->
+                    <!--				<span class="pub_info"><strong>IEEE Internet Computing 2009 </strong>. Emerging Internet Technologies and Applications for E-learning.</span> -->
+                    <!--				[<a href="http://dx.doi.org/10.1109/MIC.2009.90">link</a>]-->
+                    <!--				</p>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+
+                </ul>
+
+            </div><!-- /.blog-post -->
+
+        </div><!-- /.website-main -->
+
+        <!--aside class="col-md-4 page-sidebar m-0 py-0">
+       <div class="px-1 mb-4">
+         <h3>Group Members</h3>
+         <ul class="list-unstyled pl-3 pt-2">
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/tianlu.jpg" width="56" alt="">
+                     <div class="media-body">
+                       <a href="http://www.cs.virginia.edu/~tw8cb/">Tianlu Wang</a>
+                       <p>PhD Student</p>
+                     </div>
+            </li>
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/paola.jpg" width="56" alt="">
+                     <div class="media-body">
+                       <a href="https://paolacascante.com/">Paola Cascante-Bonilla</a>
+                       <p>PhD Student</p>
+                     </div>
+            </li>
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/fuwen.jpg" width="56" alt="">
+                     <div class="media-body">
+                       <a href="http://www.cs.virginia.edu/~ft3ex/">Fuwen Tan</a>
+                       <p>PhD Student</p>
+                     </div>
+            </li>
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/ziyan.jpg" width="56" alt="">
+                     <div class="media-body">
+                       Ziyan Yang
+                       <p>PhD Student</p>
+                     </div>
+            </li>
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/jeffrey.jpg" width="56" alt="">
+                     <div class="media-body">
+                       Jeffrey Tan
+                       <p>Undergraduate Student</p>
+                     </div>
+            </li>
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/lindsey.jpg" width="56" alt="">
+                     <div class="media-body">
+                       Lindsey Shavers
+                       <p>Undergraduate Student</p>
+                     </div>
+            </li>
+            <li class="media mb-1"><img class="mr-2 img-thumbnail p-0" src="images/leticia.jpg" width="56" alt="">
+                   <div class="media-body">
+                       Leticia Pinto-Alva
+                       <p>Visiting Student</p>
+                     </div>
+            </li>
+         </ul>
+       </div>
+       </div>
+     </aside--><!-- /.page-sidebar -->
+
+    </div><!-- /.row -->
+
+    <div class="row mx-0 mx-lg-2 container justify-content-center">
+        <!--	<div class="col-12 text-muted text-center text-smallest">CURRENT AND PAST SPONSORS</div>-->
+        <!--	<div class="col-12 m-0 d-flex flex-column flex-md-row p-0 py-4">-->
+        <!--    <img src="images/nsf-logo.png" height="68" alt="Salesforce" class="mx-auto my-0"/>-->
+        <!--    <img src="images/amazon-logo.png" height="38" alt="Amazon" class="mx-auto my-auto pt-3"/>-->
+        <!--    <img src="images/logo-salesforce.svg" height="52" alt="Salesforce" class="mx-auto p-1 my-2"/>-->
+        <!--    <img src="images/sap-logo.svg" height="32" alt="SAP SE" class="mx-auto my-3 pr-xl-0 pl-xl-2"/>-->
+        <!--    <img src="images/facebook-logo.jpg" height="50" alt="Facebook AI" class="mx-auto my-1"/>-->
+        <!--    <img src="images/leidos-logo.svg" height="28" alt="Leidos Inc" class="mx-auto my-3"/>-->
+        <!--    <img src="images/ebay-logo.png" height="55" alt="eBay Inc" class="mx-auto my-1"/>-->
+        <!--    <img src="images/adobe.svg" height="45" alt="Adobe" class="mx-auto my-2"/>-->
+        <!--    <img src="images/ibm-logo.png" height="22" alt="IBM Research" class="mx-auto my-3"/>-->
+        <!--    <img src="images/google-logo.svg" height="32" alt="Google" class="mx-auto my-3"/>-->
+    </div>
+    </div>
+
+</main><!-- /.container -->
+
+<footer class="page-footer">
+    <p>Interdisciplinary Research Center @ <a href="http://www.sdu.edu.cn">Shandong University</a> ‒ Qingdao, China
+    </p>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Bootstrap JS -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+<!--<script src="js/bootstrap.min.js"></script>-->
+
+</body>
+</html>
