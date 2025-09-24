@@ -1,0 +1,42 @@
+/* Typography and base */
+body { font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Microsoft Yahei", sans-serif; font-size: 19px; }
+.publication-title { font-family: "Castoro", serif; }
+.hero.is-light { background: #fafafa; }
+.publication-links .button { margin: 6px 6px 0 0; }
+
+/* Media frames */
+.teaser-img, .fig-img { border: 1px solid #e5e7eb; border-radius: 8px; }
+.fig-video { border: 1px solid #e5e7eb; border-radius: 8px; max-width: 100%; height: auto; }
+.crop-top-20 { clip-path: inset(20% 0 0 0); -webkit-clip-path: inset(20% 0 0 0); }
+.caption { color: #6b7280; font-size: 1.05rem; margin-top: 6px; }
+.content p { line-height: 1.8; }
+.center { text-align: center; }
+
+/* Layout width */
+.container.is-max-desktop { max-width: 1400px; }
+.publication-authors { font-size: 1.25rem; }
+.is-size-7 { font-size: 1.1rem !important; }
+
+/* Cropper-based top cut */
+.video-cropper { height: 580px; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 8px; }
+.video-cropper > video { width: 100%; height: auto; display: block; transform: translateY(-20%); }
+
+/* Top logo strip */
+.logo-strip { display: flex; align-items: center; justify-content: center; gap: 28px; padding: 6px 0; }
+.logo-strip img { height: 99px; object-fit: contain; filter: none; opacity: 1; transition: transform .2s ease; }
+.logo-strip img:hover { transform: translateY(-1px); }
+@media (max-width: 768px) { .logo-strip { gap: 18px; } .logo-strip img { height: 72px; } }
+@media (min-width: 1024px) { .logo-strip img { height: 117px; } }
+
+/* Tighten space between top logos and title */
+.hero:first-of-type .hero-body { padding-top: 1.2rem; }
+
+/* Side vertical nav */
+.side-nav { position: fixed; left: 18px; top: 50%; transform: translateY(-50%); z-index: 1000; }
+.side-nav a { display: block; margin: 8px 0; padding: 8px 12px; background: rgba(255,255,255,0.92); border: 1px solid #e5e7eb; border-radius: 9999px; font-size: 0.95rem; color: #374151; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+.side-nav a:hover { background: #111827; color: #ffffff; }
+@media (max-width: 768px) { .side-nav { left: 8px; } .side-nav a { padding: 6px 10px; font-size: 0.9rem; } }
+
+/* Hero summary */
+.hero-summary { margin-top: 10px; color: #4b5563; max-width: 980px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.hero-summary strong { color: #111827; }
