@@ -7,37 +7,25 @@
   <meta name="keywords" content="3D Mesh Generation, Autoregressive, Local-to-Global, Boundary Condition, Point Cloud">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MeshMosaic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://xrvitd.github.io" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MeshMosaic: Scaling Artist Mesh Generation via Local-to-Global Assembly">
+  <meta property="og:description" content="MeshMosaic scales artist-designed meshes to 100K+ triangles via local-to-global assembly of boundary-conditioned patches, preserving fine details and controllable density.">
+  <meta property="og:image" content="https://xrvitd.github.io/images/title.png">
+  <meta property="og:url" content="https://xrvitd.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MeshMosaic: Scaling Artist Mesh Generation via Local-to-Global Assembly">
+  <meta name="twitter:description" content="Local-to-global assembly of boundary-conditioned patches; 100K+ triangles with fine details.">
+  <meta name="twitter:image" content="https://xrvitd.github.io/images/title.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body { font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Microsoft Yahei", sans-serif; font-size: 19px; }
-    .publication-title { font-family: "Castoro", serif; }
-    .hero.is-light { background: #fafafa; }
-    .publication-links .button { margin: 6px 6px 0 0; }
-    .teaser-img, .fig-img { border: 1px solid #e5e7eb; border-radius: 8px; }
-    .fig-video { border: 1px solid #e5e7eb; border-radius: 8px; max-width: 100%; height: auto; }
-    .crop-top-20 { clip-path: inset(20% 0 0 0); -webkit-clip-path: inset(20% 0 0 0); }
-    .caption { color: #6b7280; font-size: 1.05rem; margin-top: 6px; }
-    .content p { line-height: 1.8; }
-    .center { text-align: center; }
-    /* widen overall page */
-    .container.is-max-desktop { max-width: 1400px; }
-    .publication-authors { font-size: 1.25rem; }
-    .is-size-7 { font-size: 1.1rem !important; }
-    /* cropper-based top cut to avoid layout shift when fixing height */
-    .video-cropper { height: 580px; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 8px; }
-    .video-cropper > video { width: 100%; height: auto; display: block; transform: translateY(-20%); }
-    /* top logo strip */
-    .logo-strip { display: flex; align-items: center; justify-content: center; gap: 28px; padding: 6px 0; }
-    .logo-strip img { height: 99px; object-fit: contain; filter: none; }
-    @media (min-width: 1024px) { .logo-strip img { height: 117px; } }
-    /* tighten space between top logos and title */
-    .hero:first-of-type .hero-body { padding-top: 1.2rem; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -46,22 +34,31 @@
   <section>
     <div class="container is-max-desktop">
       <div class="logo-strip">
-        <img src="https://xrvitd.github.io/images/Logo_HKU.png" alt="The University of Hong Kong (HKU)">
-        <img src="https://xrvitd.github.io/images/Logo_tencent.png" alt="Tencent Visvise">
-        <img src="https://xrvitd.github.io/images/UST.svg" alt="Hong Kong University of Science and Technology (HKUST)">
-        <img src="https://xrvitd.github.io/images/Emblem_motto_name_MUST_logo.png" alt="Macau University of Science and Technology (MUST)">
-        <img src="https://xrvitd.github.io/images/Logo_SDU.png" alt="Shandong University (SDU)">
-        <img src="https://xrvitd.github.io/images/Logo_TAMU.png" alt="Texas A&M University (TAMU)">
+        <img src="https://xrvitd.github.io/images/Logo_HKU.png" alt="The University of Hong Kong (HKU)" loading="lazy">
+        <img src="https://xrvitd.github.io/images/Logo_tencent.png" alt="Tencent Visvise" loading="lazy">
+        <img src="https://xrvitd.github.io/images/UST.svg" alt="Hong Kong University of Science and Technology (HKUST)" loading="lazy">
+        <img src="https://xrvitd.github.io/images/Emblem_motto_name_MUST_logo.png" alt="Macau University of Science and Technology (MUST)" loading="lazy">
+        <img src="https://xrvitd.github.io/images/Logo_SDU.png" alt="Shandong University (SDU)" loading="lazy">
+        <img src="https://xrvitd.github.io/images/Logo_TAMU.png" alt="Texas A&M University (TAMU)" loading="lazy">
       </div>
     </div>
   </section>
 
-  <section class="hero">
+  <!-- Side navigation -->
+  <div class="side-nav" aria-label="section navigation">
+    <a href="#home">Home</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#method">Method</a>
+    <a href="#results">Results</a>
+    <a href="#BibTeX">BibTeX</a>
+  </div>
+
+  <section class="hero" id="home">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img src="https://xrvitd.github.io/images/title.png" alt="MeshMosaic" style="height:70px; vertical-align:-6px;">: Scaling Artist Mesh Generation via Local-to-Global Assembly</h1>
+            <h1 class="title is-1 publication-title"><img src="https://xrvitd.github.io/images/title.png" alt="MeshMosaic" style="height:70px; vertical-align:-6px;" loading="lazy">: Scaling Artist Mesh Generation via Local-to-Global Assembly</h1>
             <div class="is-size-5 publication-authors">
               <div class="is-size-8">
                 <span class="author-block"><a href="https://ruixu.me/" target="_blank">Rui Xu</a><sup>1</sup>,</span>
@@ -69,7 +66,7 @@
                 <span class="author-block"> <a href="https://qiujiedong.github.io/" target="_blank">Qiujie Dong</a><sup>1</sup>,</span>
                 <span class="author-block"> <a href="#" target="_blank">Le Wan</a><sup>2</sup>,</span>
                 <span class="author-block"> <a href="https://scholar.google.com/citations?user=pM4ebg0AAAAJ&hl=en" target="_blank">Zhe Zhu</a><sup>2</sup>,</span>
-                <span class="author-block"> <a href="https://penghtyx.github.io/yuki-lipeng/" target="_blank">Peng Li</a><sup>3</sup>,</span>
+                <span class="author-block"> <a href="https://penghtyx.github.io/yuki-lipeng" target="_blank">Peng Li</a><sup>3</sup>,</span>
                 <span class="author-block"> <a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a><sup>1</sup>,</span> <br>
                 <span class="author-block"> <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin</a><sup>4</sup>,</span>
                 <span class="author-block"> <a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html" target="_blank">Shiqing Xin</a><sup>5</sup>,</span>
@@ -104,7 +101,7 @@
 
         <div class="columns is-centered" style="margin-top:18px;">
           <div class="column is-full has-text-centered">
-            <video class="fig-video" src="https://xrvitd.github.io/images/show.mp4" autoplay muted loop playsinline></video>
+            <video class="fig-video" src="https://xrvitd.github.io/images/show.mp4" autoplay muted loop playsinline preload="metadata"></video>
             <div class="caption">MeshMosaic empowers scaling up artist mesh generation to more than 100k triangles by assembling boundary-conditioned local patches into cohesive, high-resolution meshes. It delivers flexible support over mesh density and ensures the faithful retention of intricate design details. Faces are assigned random blue colors to better illustrate the mesh layout.</div>
           </div>
         </div>
@@ -114,7 +111,7 @@
   </section>
 
   <!-- Abstract -->
-  <section class="hero is-light is-small">
+  <section class="hero is-light is-small" id="abstract">
     <div class="container is-max-desktop">
       <h2 class="title is-4 center">Abstract</h2>
       <div class="content has-text-justified">
@@ -130,13 +127,13 @@
   </section>
 
   <!-- Method / Pipeline -->
-  <section class="section">
+  <section class="section" id="method">
     <div class="container is-max-desktop">
       <h2 class="title is-3 center">Method</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <div class="video-cropper">
-            <video class="fig-video" src="https://xrvitd.github.io/images/pepiline.mp4" autoplay muted loop playsinline></video>
+            <video class="fig-video" src="https://xrvitd.github.io/images/pepiline.mp4" autoplay muted loop playsinline preload="metadata"></video>
           </div>
           <div class="caption">The pipeline of MeshMosaic: Local-to-global assembly with semantic patching and boundary conditioning.</div>
         </div>
@@ -156,7 +153,7 @@ according to the segmented patches and the original shape. Finally, our approach
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
 
-          <video class="fig-video" src="https://xrvitd.github.io/images/train.mp4" autoplay muted loop playsinline></video>
+          <video class="fig-video" src="https://xrvitd.github.io/images/train.mp4" autoplay muted loop playsinline preload="metadata"></video>
 
           <div class="caption">The workflow of MeshMosaic for generating a single patch.</div>
         </div>
@@ -174,12 +171,12 @@ local features and fed into an autoregressive hourglass transformer for mesh gen
   </section>
 
   <!-- Comparisons -->
-  <section class="section">
+  <section class="section" id="results">
     <div class="container is-max-desktop">
       <h2 class="title is-3 center">Comparisons</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <video class="fig-video" src="https://xrvitd.github.io/images/comp.mp4" autoplay muted loop playsinline></video>
+          <video class="fig-video" src="https://xrvitd.github.io/images/comp.mp4" autoplay muted loop playsinline preload="metadata"></video>
           <div class="caption">Visual comparison of MeshMosaic with state-of-the-art methods.</div>
         </div>
       </div>
@@ -191,7 +188,7 @@ local features and fed into an autoregressive hourglass transformer for mesh gen
       <h2 class="title is-3 center">High-resolution Face Numbers</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <video class="fig-video" src="https://xrvitd.github.io/images/facecnt.mp4" autoplay muted loop playsinline></video>
+          <video class="fig-video" src="https://xrvitd.github.io/images/facecnt.mp4" autoplay muted loop playsinline preload="metadata"></video>
           <div class="caption">Visual comparison of MeshMosaic with state-of-the-art methods.</div>
         </div>
     </div>
@@ -207,7 +204,7 @@ local features and fed into an autoregressive hourglass transformer for mesh gen
       <h2 class="title is-3 center">More Patches</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <video class="fig-video" src="https://xrvitd.github.io/images/boom.mp4" autoplay muted loop playsinline></video>
+          <video class="fig-video" src="https://xrvitd.github.io/images/boom.mp4" autoplay muted loop playsinline preload="metadata"></video>
           <div class="caption">MeshMosaic on hundreds of patches.</div>
         </div>
       </div>
@@ -233,42 +230,8 @@ local features and fed into an autoregressive hourglass transformer for mesh gen
     </div>
   </section>
 
-  <!-- Videos -->
-  <!-- <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 center">Video Demos</h2>
-      <div class="columns is-multiline is-centered has-text-centered">
-        <div class="column is-half">
-          <video class="fig-video" src="https://xrvitd.github.io/images/boom.mp4" autoplay muted loop playsinline></video>
-          <div class="caption">boom.mp4</div>
-        </div>
-        <div class="column is-half">
-          <video class="fig-video" src="https://xrvitd.github.io/images/comp.mp4" autoplay muted loop playsinline></video>
-          <div class="caption">comp.mp4</div>
-        </div>
-        <div class="column is-half">
-          <video class="fig-video" src="https://xrvitd.github.io/images/facecnt.mp4" autoplay muted loop playsinline></video>
-          <div class="caption">facecnt.mp4</div>
-        </div>
-        <div class="column is-half">
-          <div class="video-cropper">
-            <video class="fig-video" src="https://xrvitd.github.io/images/pepiline.mp4" autoplay muted loop playsinline></video>
-          </div>
-          <div class="caption">pepiline.mp4</div>
-        </div>
-        <div class="column is-half">
-          <video class="fig-video" src="https://xrvitd.github.io/images/show.mp4" autoplay muted loop playsinline></video>
-          <div class="caption">show.mp4</div>
-        </div>
-        <div class="column is-half">
-          <video class="fig-video" src="https://xrvitd.github.io/images/train.mp4" autoplay muted loop playsinline></video>
-          <div class="caption">train.mp4</div>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  
 
 </body>
 
 </html>
-
