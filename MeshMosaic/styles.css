@@ -22,14 +22,16 @@ body { font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe 
 .video-cropper > video { width: 100%; height: auto; display: block; transform: translateY(-20%); }
 
 /* Top logo strip */
-.logo-strip { display: flex; align-items: center; justify-content: center; gap: 28px; padding: 6px 0; }
+.logo-strip { display: flex; align-items: center; justify-content: center; gap: 28px; padding: 0; }
 .logo-strip img { height: 99px; object-fit: contain; filter: none; opacity: 1; transition: transform .2s ease; }
 .logo-strip img:hover { transform: translateY(-1px); }
 @media (max-width: 768px) { .logo-strip { gap: 18px; } .logo-strip img { height: 72px; } }
 @media (min-width: 1024px) { .logo-strip img { height: 117px; } }
 
 /* Tighten space between top logos and title */
-.hero:first-of-type .hero-body { padding-top: 1.2rem; }
+.hero:first-of-type .hero-body { padding-top: 0; }
+/* Remove space under the top logo section */
+section:first-of-type { padding-bottom: 0; }
 
 /* Side vertical nav */
 .side-nav { position: fixed; left: 18px; top: 50%; transform: translateY(-50%); z-index: 1000; }
