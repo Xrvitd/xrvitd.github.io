@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="MeshMosaic: Scaling Artist Mesh Generation via Local-to-Global Assembly">
+  <meta name="keywords" content="3D Mesh Generation, Autoregressive, Local-to-Global, Boundary Condition, Point Cloud">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeshMosaic</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Microsoft Yahei", sans-serif; font-size: 19px; }
+    .publication-title { font-family: "Castoro", serif; }
+    .hero.is-light { background: #fafafa; }
+    .publication-links .button { margin: 6px 6px 0 0; }
+    .teaser-img, .fig-img { border: 1px solid #e5e7eb; border-radius: 8px; }
+    .fig-video { border: 1px solid #e5e7eb; border-radius: 8px; max-width: 100%; height: auto; }
+    .crop-top-20 { clip-path: inset(20% 0 0 0); -webkit-clip-path: inset(20% 0 0 0); }
+    .caption { color: #6b7280; font-size: 1.05rem; margin-top: 6px; }
+    .content p { line-height: 1.8; }
+    .center { text-align: center; }
+    /* widen overall page */
+    .container.is-max-desktop { max-width: 1400px; }
+    .publication-authors { font-size: 1.25rem; }
+    .is-size-7 { font-size: 1.1rem !important; }
+    /* cropper-based top cut to avoid layout shift when fixing height */
+    .video-cropper { height: 580px; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 8px; }
+    .video-cropper > video { width: 100%; height: auto; display: block; transform: translateY(-20%); }
+    /* top logo strip */
+    .logo-strip { display: flex; align-items: center; justify-content: center; gap: 28px; padding: 6px 0; }
+    .logo-strip img { height: 99px; object-fit: contain; filter: none; }
+    @media (min-width: 1024px) { .logo-strip img { height: 117px; } }
+    /* tighten space between top logos and title */
+    .hero:first-of-type .hero-body { padding-top: 1.2rem; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top logos -->
+  <section>
+    <div class="container is-max-desktop">
+      <div class="logo-strip">
+        <img src="https://xrvitd.github.io/images/Logo_HKU.png" alt="The University of Hong Kong (HKU)">
+        <img src="https://xrvitd.github.io/images/Logo_tencent.png" alt="Tencent Visvise">
+        <img src="https://xrvitd.github.io/images/UST.svg" alt="Hong Kong University of Science and Technology (HKUST)">
+        <img src="https://xrvitd.github.io/images/Emblem_motto_name_MUST_logo.png" alt="Macau University of Science and Technology (MUST)">
+        <img src="https://xrvitd.github.io/images/Logo_SDU.png" alt="Shandong University (SDU)">
+        <img src="https://xrvitd.github.io/images/Logo_TAMU.png" alt="Texas A&M University (TAMU)">
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="https://xrvitd.github.io/images/title.png" alt="MeshMosaic" style="height:70px; vertical-align:-6px;">: Scaling Artist Mesh Generation via Local-to-Global Assembly</h1>
+            <div class="is-size-5 publication-authors">
+              <div class="is-size-8">
+                <span class="author-block"><a href="https://ruixu.me/" target="_blank">Rui Xu</a><sup>1</sup>,</span>
+                <span class="author-block"> <a href="https://xty.im/" target="_blank">Tianyang Xue</a><sup>1</sup>,</span>
+                <span class="author-block"> <a href="https://qiujiedong.github.io/" target="_blank">Qiujie Dong</a><sup>1</sup>,</span>
+                <span class="author-block"> <a href="#" target="_blank">Le Wan</a><sup>2</sup>,</span>
+                <span class="author-block"> <a href="https://scholar.google.com/citations?user=pM4ebg0AAAAJ&hl=en" target="_blank">Zhe Zhu</a><sup>2</sup>,</span>
+                <span class="author-block"> <a href="#" target="_blank">Peng Li</a><sup>3</sup>,</span>
+                <span class="author-block"> <a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a><sup>1</sup>,</span> <br>
+                <span class="author-block"> <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin</a><sup>4</sup>,</span>
+                <span class="author-block"> <a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html" target="_blank">Shiqing Xin</a><sup>5</sup>,</span>
+                <span class="author-block"> <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a><sup>3&dagger;</sup>,</span>
+                <span class="author-block"> <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a><sup>6</sup>,</span>
+                <span class="author-block"> <a href="https://www.cs.hku.hk/index.php/people/academic-staff/taku" target="_blank">Taku Komura</a><sup>1&dagger;</sup></span>
+              </div>
+              <div class="is-size-7" style="margin-top:8px;">
+                <sup>1</sup>The University of Hong Kong,
+                <sup>2</sup>Tencent Visvise,
+                <sup>3</sup>Hong Kong University of Science and Technology,<br>
+                <sup>4</sup>Macau University of Science and Technology, 
+                <sup>5</sup>Shandong University,
+                <sup>6</sup>Texas A&amp;M University
+                <div>(&dagger; Corresponding authors.)</div>
+              </div>
+              <div class="is-size-6" style="margin-top:6px; font-weight:600;">Arxiv Preprint.</div>
+            </div>
+
+            <div class="publication-links">
+              <a href="main.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener">
+                <span class="icon"><i class="fa-regular fa-file-pdf"></i></span>
+                <span>Paper (Arxiv)</span>
+              </a>
+              <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code (Coming)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered" style="margin-top:18px;">
+          <div class="column is-full has-text-centered">
+            <video class="fig-video" src="https://xrvitd.github.io/images/show.mp4" autoplay muted loop playsinline></video>
+            <div class="caption">MeshMosaic empowers scaling up artist mesh generation to more than 100k triangles by assembling boundary-conditioned local patches into cohesive, high-resolution meshes. It delivers flexible support over mesh density and ensures the faithful retention of intricate design details. Faces are assigned random blue colors to better illustrate the mesh layout.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="hero is-light is-small">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 center">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Scaling artist-designed meshes to high triangle numbers remains challenging for autoregressive generative models. Existing transformer-based methods suffer from long-sequence bottlenecks and limited quantization resolution, primarily due to the large number of tokens required and constrained quantization granularity. These issues prevent faithful reproduction of fine geometric details and structured density patterns.
+          We introduce MeshMosaic, a novel local-to-global framework for artist mesh generation that scales to over 100K triangles—substantially surpassing prior methods, which typically handle only around 8K faces. MeshMosaic first segments shapes into patches, generating each patch autoregressively and leveraging shared boundary conditions to promote coherence, symmetry, and seamless connectivity between neighboring regions.
+          This strategy enhances scalability to high-resolution meshes by quantizing patches individually, resulting in more symmetrical and organized mesh density and structure.
+          Extensive experiments across multiple public datasets demonstrate that MeshMosaic significantly outperforms state-of-the-art methods in both geometric fidelity and user preference, supporting superior detail representation and practical mesh generation for real-world applications.
+        </p>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- Method / Pipeline -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 center">Method</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <div class="video-cropper">
+            <video class="fig-video" src="https://xrvitd.github.io/images/pepiline.mp4" autoplay muted loop playsinline></video>
+          </div>
+          <div class="caption">The pipeline of MeshMosaic: Local-to-global assembly with semantic patching and boundary conditioning.</div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          During inference, our method first applies PartField to obtain semantic segmentation of the input shape. The input point cloud is then sampled
+according to the segmented patches and the original shape. Finally, our approach produces a clean, highly detailed mesh by assembling the generated patches.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 center">Train on Single Patch</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+
+          <video class="fig-video" src="https://xrvitd.github.io/images/train.mp4" autoplay muted loop playsinline></video>
+
+          <div class="caption">The workflow of MeshMosaic for generating a single patch.</div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Both global and local point
+cloud features are extracted by a locked Michelangelo encoder. For each patch,
+the nearest boundary mesh is identified, tokenized, and concatenated before the target mesh token
+sequence. The GRU network encodes boundary tokens, which are then combined with global and
+local features and fed into an autoregressive hourglass transformer for mesh generation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparisons -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 center">Comparisons</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <video class="fig-video" src="https://xrvitd.github.io/images/comp.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">Visual comparison of MeshMosaic with state-of-the-art methods.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Face -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 center">High-resolution Face Numbers</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <video class="fig-video" src="https://xrvitd.github.io/images/facecnt.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">Visual comparison of MeshMosaic with state-of-the-art methods.</div>
+        </div>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        We present a more compelling example. For a complex fighter jet model, our method successfully reconstructs intricate details using nearly 30K triangles whereas other approaches struggle with such highly complex shapes, typically yielding only a few hundred to a few thousand triangles. This noticeable gap demonstrates the superior detail recovery and scalability of our method with substantially higher triangle counts.
+      </p>
+  </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 center">More Patches</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <video class="fig-video" src="https://xrvitd.github.io/images/boom.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">MeshMosaic on hundreds of patches.</div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Although our training set contains no more than sixty splits per instance, our method can handle inference tasks involving hundreds of patches during testing. This highlights the strong generalization capability of our method.
+        </p>
+    </div>
+    </div>
+  </section>
+  <!-- BibTeX -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-4">BibTeX</h2>
+      <p>We will release an official BibTeX entry. </p>
+      <!-- <pre><code>@misc{meshmosaic2026,
+  title = {MeshMosaic: Scaling Artist Mesh Generation via Local-to-Global Assembly},
+  author = {Xu, Rui and Xue, Tianyang and Dong, Qiujie and Wan, Le and Zhu, Zhe and Li, Peng and Dou, Zhiyang and Lin, Cheng and Xin, Shiqing and Liu, Yuan and Wang, Wenping and Komura, Taku},
+  year = {2026},
+
+}</code></pre> -->
+
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 center">Video Demos</h2>
+      <div class="columns is-multiline is-centered has-text-centered">
+        <div class="column is-half">
+          <video class="fig-video" src="https://xrvitd.github.io/images/boom.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">boom.mp4</div>
+        </div>
+        <div class="column is-half">
+          <video class="fig-video" src="https://xrvitd.github.io/images/comp.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">comp.mp4</div>
+        </div>
+        <div class="column is-half">
+          <video class="fig-video" src="https://xrvitd.github.io/images/facecnt.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">facecnt.mp4</div>
+        </div>
+        <div class="column is-half">
+          <div class="video-cropper">
+            <video class="fig-video" src="https://xrvitd.github.io/images/pepiline.mp4" autoplay muted loop playsinline></video>
+          </div>
+          <div class="caption">pepiline.mp4</div>
+        </div>
+        <div class="column is-half">
+          <video class="fig-video" src="https://xrvitd.github.io/images/show.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">show.mp4</div>
+        </div>
+        <div class="column is-half">
+          <video class="fig-video" src="https://xrvitd.github.io/images/train.mp4" autoplay muted loop playsinline></video>
+          <div class="caption">train.mp4</div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+</body>
+
+</html>
