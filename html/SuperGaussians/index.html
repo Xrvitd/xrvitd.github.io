@@ -1,0 +1,423 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMWE7LB99M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PMWE7LB99M');
+    </script>
+	<title>SVGS: Enhancing Gaussian Splatting Using Primitives with Spatially Varying Colors</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon" href="./images/QQ图片20220912112705.jpg" sizes="64x64" type="image/png">
+
+	<!-- Meta tags for Zotero grab citation -->
+<!--	<meta name="citation_title" content="RFEPS: Reconstructing Feature-line Equipped Polygonal Surface">-->
+<!--	<meta name="citation_author" content="Rui Xu">-->
+<!--	<meta name="citation_author" content="Zhiyang Dou">-->
+<!--	<meta name="citation_author" content="Ningna Wang">-->
+<!--	<meta name="citation_author" content="Chen Zong">-->
+<!--	<meta name="citation_author" content="Shiqing Xin">-->
+<!--	<meta name="citation_author" content="Mingyan Jiang">-->
+<!--	<meta name="citation_author" content="Tao Ju">-->
+<!--	<meta name="citation_author" content="Changhe Tu">-->
+<!--	<meta name="citation_publication_date" content="2022">-->
+<!--	<meta name="citation_conference_title" content="SIGGRAPH Asia">-->
+<!--	<meta name="citation_pdf_url" content="https://arxiv.org/abs/2212.03600">-->
+
+	<!-- <meta name="robots" content="index,follow">
+	<meta name="description"
+		content="
+		In mesh simplification, common requirements like accuracy, triangle quality, and feature alignment are often considered as a trade-off. Existing algorithms concentrate on just one or a few specific aspects of these requirements. For example, the well-known Quadric Error Metrics (QEM) approach prioritizes accuracy and can preserve strong feature lines/points as well, but falls short in ensuring high triangle quality and may degrade weak features that are not as distinctive as strong ones. In this paper, we propose a smooth functional that simultaneously considers all of these requirements. The functional comprises a normal anisotropy term and a Centroidal Voronoi Tessellation (CVT) energy term, with the variables being a set of movable points lying on the surface. The former inherits the spirit of QEM but operates in a continuous setting, while the latter encourages even point distribution, allowing various surface metrics. We further introduce a decaying weight to automatically balance the two terms. We selected 100 CAD models from the ABC dataset, along with 21 organic models, to compare the existing mesh simplification algorithms with ours. Experimental results reveal an important observation: the introduction of a decaying weight effectively reduces the conflict between the two terms and enables the alignment of weak features. This distinctive feature sets our approach apart from most existing mesh simplification methods and demonstrates significant potential in shape understanding. ">
+		<link rel="author" href="" /> -->
+
+
+	<!-- Fonts and stuff -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800'
+		rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/project.css" media="screen" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+	<script src="js/google-code-prettify/prettify.js"></script>
+</head>
+
+<body>
+	<div id="content">
+		<div id="content-inner">
+			<div class="section logos" style="text-align:center">
+				<a href="https://www.hku.hk/" target="_blank"><IMG src="./logos/Logo_HKU.png" height="116" border="0"></a></td>
+				<a href="https://www.pku.edu.cn/" target="_blank"><IMG src="https://xrvitd.github.io/images/pku.png" height="116"	border="0"></a></td>
+				<a href="https://www.ntu.edu.sg/" target="_blank"><IMG src="./logos/NTU.png" height="116"	border="0"></a></td>
+				<a href="https://hkust.edu.hk/" target="_blank"><IMG src="./logos/UST.svg" height="116" border="0"></a></td>
+				<a href="https://www.must.edu.mo/index.html?locale=en_US" target="_blank"><IMG src="https://xrvitd.github.io/images/Emblem_motto_name_MUST_logo.png" height="116" border="0"></a></td>
+				<a href="https://www.en.sdu.edu.cn/" target="_blank"><IMG src="./logos/Logo_SDU.png" height="116" border="0"></a></td>
+				<a href="https://www.tamu.edu/" target="_blank"><IMG src="./logos/Logo_TAMU.png" height="116"	border="0"></a></td>
+
+			</div>
+
+			<div class="section head">
+
+				<h1>SVGS: Enhancing Gaussian Splatting Using Primitives with Spatially Varying Colors</h1>
+
+				<div class="authors">
+					<a href="https://ruixu.me" target="_blank">Rui Xu</a><sup> 1</sup>&#160;&#160;
+					<a href="" target="_blank">Wenyue Chen</a><sup> 2</sup>&#160;&#160;
+					<a href="https://jiepengwang.github.io/" target="_blank">Jiepeng Wang</a><sup> 1</sup>&#160;&#160;
+					<a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a><sup> 3,4</sup>&#160;&#160;
+					<a href="https://totoro97.github.io/" target="_blank">Peng Wang</a><sup> 1</sup>&#160;&#160;
+					<a href="https://clinplayer.github.io/"  target="_blank">Cheng Lin</a><sup> 5</sup>&#160;&#160; 
+					<a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html" target="_blank">Shiqing Xin</a><sup> 6</sup>&#160;&#160;
+					<a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a><sup> 7</sup>&#160;&#160;
+					<a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a><sup> 7</sup>&#160;&#160;
+					<a href="https://www.cs.hku.hk/index.php/people/academic-staff/taku" target="_blank">Taku Komura</a><sup> 1</sup>&#160;&#160;
+				</div>
+
+				<div class="affiliations">
+					<sup>1</sup><a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>&#160;&#160;
+					<sup>2</sup><a href="https://www.pku.edu.cn/" target="_blank">Peking University</a>&#160;&#160;
+					<sup>3</sup><a href="https://www.ntu.edu.sg/" target="_blank">Nanyang Technological University</a>&#160;&#160;<br>
+					<sup>4</sup><a href="https://hkust.edu.hk/" target="_blank">Hong Kong University of Science and Technology</a>&#160;&#160;
+					<sup>5</sup><a href="https://www.must.edu.mo/index.html?locale=en_US" target="_blank">Macau University of Science and Technology</a>&#160;&#160;
+					<sup>6</sup><a href="https://www.en.sdu.edu.cn/" target="_blank">Shandong University</a>&#160;&#160;
+					<sup>7</sup><a href="https://www.tamu.edu/" target="_blank">Texas A&M University</a>&#160;&#160;
+				</div>
+				<div class="venue"> Arxiv Preprint. </div>
+				<!-- <div class="venue"> Selected for inclusion in the Technical Papers Video Trailer. </div> -->
+				<!-- <div class="venue" style="color:#e53333"> SIGGRAPH 2023 Technical Papers Best Paper Award. </div> -->
+			</div>
+						<div class="section downloads">
+					<center>
+						<ul style="padding-left: 0; height: 150px;">
+							<li class="grid">
+								<div class="griditem">
+									<a href="http://arxiv.org/abs/2411.18966"><img src="images/pdf.png" style="width: 120px; height: 120px;"></a><br/>
+									<a href="http://arxiv.org/abs/2411.18966">[Paper]</a>
+								</div>
+							</li>
+							<li class="grid">
+								<div class="griditem">
+									<a href="https://youtu.be/K0liSjZGnIY"><img src="images/video.png" style="width: 120px; height: 120px;"></a><br/>
+									<a href="https://youtu.be/K0liSjZGnIY">[Video]</a>
+								</div>
+							</li>
+							<li class="grid">
+								<div class="griditem">
+									<a href="https://github.com/Xrvitd/SVGS"><img src="images/data_ico.png" style="width: 120px; height: 120px;"></a><br/>
+									<a href="https://github.com/Xrvitd/SVGS">[Code]</a>
+								</div>
+							</li>
+						</ul>
+					</center>
+				</div>
+
+
+				
+				<div class="section abstract">
+					
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<iframe frameborder="0" class="juxtapose" width="49.7%" height="650" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e74c7860-ad4a-11ef-9397-d93975fe8866"></iframe>
+							<iframe frameborder="0" class="juxtapose" width="49.7%" height="650" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1747f5da-ad4b-11ef-9397-d93975fe8866"></iframe>
+						</div>
+					</div>
+					<h2>Abstract</h2><br>
+					<p>
+						Gaussian Splattings demonstrate impressive results in multi-view reconstruction based on Gaussian explicit representations. 
+						However, the current Gaussian primitives only have a single view-dependent color and an opacity to represent the appearance 
+						and geometry of the scene, resulting in a non-compact representation. In this paper, we introduce a new method called 
+						SVGS that utilizes spatially varying colors and opacity in a single Gaussian primitive to improve its representation ability. 
+						We have implemented bilinear interpolation, movable kernels, and even tiny neural networks as spatially varying functions. 
+						Quantitative and qualitative experimental results demonstrate that all three functions outperform the baseline, 
+						with the best movable kernels achieving superior novel view synthesis performance on multiple datasets, 
+						highlighting the strong potential of spatially varying functions.			</p>
+				</div>
+				<center>
+					<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<video class="video" src="https://xrvitd.github.io/images/super1.mp4" controls="controls" autoplay="autoplay" loop="loop" style="width:98%; margin-bottom:5px"></video>
+						<video class="video" src="https://xrvitd.github.io/images/super2.mp4" controls="controls" autoplay="autoplay" loop="loop" style="width:98%; margin-bottom:5px"></video>
+<!-- 						<img class="thumbnail" src="figs/pipe.png" style="width:98%; margin-bottom:20px"> -->
+					</div>
+					</div>
+				</center>
+
+
+
+				
+			<div class="section abstract">
+				<h2>SVGS</h2><br>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="figs/gallary_Final.png" style="width:100%; margin-bottom:20px">
+					</div>
+
+				</div>
+				<p>
+					SVGS gives each Gaussian the ability to vary spatially. Compared with 2DGS and 3DGS, SVGS
+is more expressive and can better reconstruct details (as seen in the white area). Additionally, SVGS can express more color
+variations using only one Gaussian, instead of being limited to just one color (bottom right).
+</p>
+			</div>
+
+			<!--<div class="section abstract">
+				<h2>Full Video</h2><br>
+				<center>
+					<!-- <iframe width="640" height="360" src="data/video.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+					<!--<iframe width="640" height="360" src="https://www.youtube.com/embed/RFqPwH7QFEI" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>-->
+					<!--iframe src="./data/video.mp4" allow="autoplay; encrypted-media" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="560" height="315" frameborder="0"></iframe-->
+					<!--<p style="font-size:11px; text-align:center">
+					Download Video: <a href="data/video.mp4" target="_blank">HD</a> (MP4, 111 MB)
+				</p>
+				</center>
+			</div>-->
+
+			<div class="section abstract">
+				<h2>Methods</h2>
+			<p>
+				<center><img class="thumbnail" src="figs/comp1.png" style="width:68%; margin-bottom:20px"></center>
+				
+				3DGS uses Gaussian ellipsoids to express scenes,
+and a learnable color is defined on each ellipsoid. 2DGS uses
+Gaussian surfels to express scenes, and a learnable color is defined
+on each Gaussian surfel. Our SVGS uses spatially varying Gaussian surfels to express scenes, and the color and opacity
+changes with the spatial position on each surfel.
+			</p>
+			</div>
+
+			<br>
+
+			<div class="section abstract">
+				<h2>Results</h2><br>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="figs/comp2.png" style="width:98%; margin-bottom:10px">
+					</div>
+					<p>
+						Visual comparison with 2DGS and 3DGS on both the Mip-NeRF360 dataset and the Tanks&Temples dataset
+shows that SVGS can reconstruct details better due to stronger expressiveness. </p>
+					</div>
+
+				</center>
+
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/comp3.png" style="width:68%; margin-bottom:10px">
+						</div>
+						<p>
+							2DGS has demonstrated
+impressive capabilities in geometric reconstruction. Since
+SVGS is implemented based on 2DGS, it
+inherits these excellent geometric reconstruction capabili-
+ties, although this is not our primary objective. The
+results demonstrate that our geometric reconstruction capa-
+bilities are comparable to 2DGS when there is no limit
+on the number of Gaussians, while also ensuring the high-
+est PSNR, indicating the best image reconstruction quality.
+Furthermore, when a limited number of Gaussians is used,
+our powerful expressiveness becomes apparent, greatly out-
+performing 2DGS in both geometric reconstruction
+quality and image rendering quality.</p>
+					</div>
+
+				</center>
+
+				<!-- <center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/comp4.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Comparison with state-of-the-art methods on the bunny model using 1000 sample points, demonstrating that our method can more effectively
+consolidate weak features. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/comp5.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Comparison with state-of-the-art methods on two smoothed inputs. The target number of points is set at 500. Our method more effectively consolidates
+weak features, whereas the QEM family may result in a chamfer along the feature line. </p>
+					</div>
+
+				</center> -->
+
+				<!-- <center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/noisy.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Comparing the reconstruction quality on point clouds with 0.5% Gaussian noise. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/sparse.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Tests are made on sparse point clouds: 500 points, 750 points and 1K points. Our results are close to the ground truth for each of the three inputs. The
+							comparison shows that our algorithm has a big advantage on sparse raw data. </p>
+					</div>
+
+				</center>
+
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/complex.png" style="width:98%; margin-bottom:20px">
+						</div>
+						<p>
+							Tests on point clouds with highly complex topology/geometry. The model in the top row has 80K points while the model in the bottom row has 100K
+							points. </p>
+					</div>
+
+				</center>
+				<center>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<img class="thumbnail" src="figs/wairf.png" style="width:50%; margin-bottom:20px">
+						</div>
+						<p>
+							Normal estimation for wireframe-type point clouds. All the models
+							are from VIPSS [Huang et al. 2019]. PGR may produce bulges around thin
+							tubular structures.
+						</p>
+					</div>
+
+				</center> -->
+
+
+			</div>
+
+			<br>
+
+<!--				<div class="section abstract">-->
+<!--				<h2>Consolidation Results</h2><br>-->
+<!--				<br>-->
+<!--				<center>-->
+<!--					<div class="row" style="margin-bottom:5px">-->
+<!--					<div class="col" style="text-align:center">-->
+<!--						<img class="thumbnail" src="figs/conso.png" style="width:100%; margin-bottom:20px">-->
+<!--					</div>-->
+<!--					<p>Test point cloud consolidation approaches by introducing different levels of noise. It can be seen that our method can not only effectively eliminate-->
+<!--						noise but also recover faithful feature lines. -->
+<!--					</p>-->
+<!--					</div>-->
+<!--				</center>-->
+<!--			-->
+<!--				-->
+<!--				</div>-->
+<!--			<br>-->
+
+<!--				<div class="section abstract">-->
+<!--				<h2>Reconstruction Results</h2>-->
+<!--				-->
+
+
+<!--				<center>-->
+<!--					<div class="row" style="margin-bottom:5px">-->
+<!--					<div class="col" style="text-align:center">-->
+<!--						<img class="thumbnail" src="figs/recon.png" style="width:100%; margin-bottom:20px">-->
+<!--					</div>-->
+<!--					<p>Comparison with state of the arts of surface reconstruction from different point cloud consolidation methods. The whole pipeline of RFEPS surpasses-->
+<!--						other methods in terms of reconstruction fidelity and manifoldness.-->
+<!--					</p>-->
+<!--					</div>-->
+<!--				</center>-->
+<!--				<br>-->
+
+
+<!--				<h2>Noisy Reconstruction Results</h2><br>-->
+<!--				<center>-->
+<!--					<div class="row" style="margin-bottom:5px">-->
+<!--					<div class="col" style="text-align:center">-->
+<!--						<img class="thumbnail" src="figs/reconnoise.png" style="width:100%; margin-bottom:20px">-->
+<!--					</div>-->
+<!--					<p> Comparison with state of the arts on a noisy point cloud input. RFEPS surpasses other methods in both the accuracy and manifoldness of the-->
+<!--						reconstruction.-->
+<!--					</div>-->
+<!--				</center>-->
+<!--				<br>-->
+
+				
+				<center>
+					<br>
+									<h2 align="center"> </h2>
+				</center>
+			
+				
+			</div>
+			
+			
+			
+
+			
+		<!-- <div class="section list">
+				<h2>Citation</h2>
+				<div class="section bibtex">
+					<pre>@article{xu2024SVGS,
+      title={SVGS: Enhancing Gaussian Splatting Using Primitives with Spatially Varying Colors}, 
+      author={Xu, Rui and Chen, Wenyue and Wang, Jiepeng and Liu, Yuan and Wang, Peng and Gao, Lin and Xin, Shiqing and Komura, Taku and Li, Xin and Wang, Wenping},
+      year={2024},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+}</div> -->
+			</div>
+			
+		<!-- 	<div class="section list">
+				<h2>Related Links</h2>
+				<div class="row" style="margin-top:15px">
+				<li>Parts of <a href="https://github.com/Totoro97/NeuS" target="_blank">our PyTorch implementation</a> are taken from <a href="https://github.com/lioryariv/idr" target="_blank">IDR</a> and <a href="https://github.com/yenchenlin/nerf-pytorch" target="_blank">NeRF-pytorch</a>.
+				<li>Check the concurrent works of learning neural implicit surfaces: </br> 			
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://arxiv.org/abs/2104.10078" target="_blank">UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction</a>, Oechsle et al. 2021 </br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://arxiv.org/abs/2106.12052" target="_blank">Volume Rendering of Neural Implicit Surfaces</a>, Yariv et al. 2021 
+				<li>Also check other works about neural scene representations and neural rendering from our group: </br> 
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://lingjie0206.github.io/papers/NSVF/" target="_blank">Neural Sparse Voxel Fields:</a>, Liu et al. 2020 </br> 	
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/" target="_blank">Non-Rigid Neural Radiance Fields: Reconstruction and Novel View Synthesis of a Dynamic Scene From Monocular Video</a>, Tretschk et al. 2021</br> 	
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="http://gvv.mpi-inf.mpg.de/projects/NeuralActor/" target="_blank">Neural Actor: Neural Free-view Synthesis of Human Actors with Pose Control</a>, Liu et al. 2021 </br> 	
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://liuyuan-pal.github.io/NeuRay/" target="_blank">Neural Rays for Occlusion-aware Image-based Rendering</a>, Liu et al. 2021. </br> 	
+				</div>
+			</div>
+			
+			<div class="section list">
+				<h2>Acknowledgements</h2>
+				<div class="row" style="margin-top:15px">
+				<p>We thank Michael Oechsle for providing the results of UNISURF. Christian Theobalt was supported by ERC Consolidator Grant 770784. Lingjie Liu was supported by Lise Meitner Postdoctoral Fellowship.</p> 
+				</div>
+			</div> -->
+			
+			
+			<div class="section">
+				<hr class="smooth">
+			Page last updated 
+				<script type="text/javascript">
+					var m = "This page was last updated: " + document.lastModified;
+					var p = m.length - 9;
+					document.writeln("<left>");
+					document.write(m.substring(p, 0) + ".");
+					document.writeln("</left>");
+				</script>
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
